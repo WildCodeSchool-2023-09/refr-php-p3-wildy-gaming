@@ -3,40 +3,51 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
+    <h1>Accueil</h1>
+    <section class="home-game">
 
-       
-    <div class="gamecard1">
-        <div class="gamecard">
-            <div class="gamepreview">
- <img src="build\images\tetris.11d717cd.png">
-  <h3>Tetris</h3>
-            
-            <p class="cardaccueil"> Catégorie : Puzzle <br /> Description : <br />
-            Range des formes afin de créer un maximum de lignes pour gagner des points.</p>
-             </div>
-             
-               <div class="gamecard2">
-        <div class="gamecard">
-            <div class="gamepreview">
- <img src="build\images\tetris.11d717cd.png">
-  <h3>Tetris</h3>
-           
-          
-            <p class="cardaccueil2"> Catégorie : Puzzle <br /> Description : <br />
-            Range des formes afin de créer un maximum de lignes pour gagner des points.</p>
-             </div>
- </div>
-</div> 
- </div> 
-  </div>
+        <a href="#">
+            <article class="home-card-game cadreblue">
+                <div class="card-game-top">
+                    <img src="{{ asset('build/images/tetris.png') }}">
+                </div>
+                <div class="card-game-body">
+                    <h3>Tetris</h3>
+                    <div class="card-game-text">
+                        <h4>Catégorie : Puzzle</h4>
+                        <h4>Description :</h4>
+                        <p>Range des formes afin de créer un maximum de lignes pour gagner des points.</p>
+                    </div>
+                </div>
+            </article>
+        </a>
 
-   <div class="gamepodiumaccueil">
-   <div class="podium">
-                <h5 class="firstpodium">BaptisteLeBoss</h5>
-                <h5 class="secondpodium">Steph_UwU</h5>
-                <h5 class="thirdpodium">DarkSajid</h5>
-            <img src="build\images\podium.50a22300.png">
-    </div>
-</div>
-</div>
+        <article class="home-card-game2 cadreblue ">
+            <div class="card-game-top2">
+                <img src="{{ asset('build/images/tetris.png') }}">
+            </div>
+            <div class="card-game-body">
+                <h3>Tetris</h3>
+                <div class="card-game-text">
+                    <h4>Catégorie : Puzzle</h4>
+                    <h4>Description :</h4>
+                    <p>Range des formes afin de créer un maximum de lignes pour gagner des points.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="home-podium">
+        <h2 class="">Ce sont les meilleurs !</h2>
+            <div class="podium">
+                <div class="podium-name">
+                    <h4 class="name1">Steph_UwU</h4>
+                    <h3 class="name2">BaptisteLeBoss</h3>
+                    <h4 class="name3">DarkSajid</h4>
+                </div>
+                <div class="podium-image">
+                    <img src="{{ asset('build/images/podium.png') }}">
+                </div>
+            </div>
+    </section>
 {% endblock %}

@@ -1,36 +1,98 @@
-.gamecard1{
-    display: flex;
-    justify-content: space-around; 
-    align-content: center;
-   
-   
-}
-.gamecard2{
+section.home-game{
     display: flex;
     justify-content: space-around;
-   
-    padding-left: 20rem;
+    margin-top: 5rem;
 }
 
-.gamepodiumaccueil{    
-   text-align: center;
-   margin-top: 7rem;
-  padding-top: 1rem;
+
+section.home-podium {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-.position{
-   text-align: center;
-   margin-top: 5rem;
+
+article.home-card-game {
+    display: flex;
+    flex-direction: column;
+
+    width: 25rem;
 }
-.firstpodium{
-    margin-left: 46.5%;
-    margin-bottom: 8rem;
+
+.card-game-top img {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+.card-game-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card-game-body h3 {
+    margin: 1rem 0;
+    font-size: 2.2rem;
+}
+
+.card-game-text h4 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.card-game-text p {
+    font-size: 1rem;
+}
+
+section.home-podium {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15rem 0;
     
 }
-.secondpodium{
-    margin-left: 42%;
-    margin-bottom: 10rem;
+
+section.home-podium h2 {
+    margin-bottom: 5rem;
+    font-size: 4rem;
 }
-.thirdpodium{
-    margin-left: 53%;
-    margin-bottom: 8rem;
+
+.podium {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.podium-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.podium-name * {
+    position: absolute;
+}
+
+.podium-name .name1 {
+    top: 15%;
+    left: -2%;
+    transform: rotate(-20deg);
+}
+
+.podium-name .name2 {
+    top: -10%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.podium-name .name3 {
+    top: 25%;
+    right: 2%;
+    transform: rotate(20deg);
+}
+
+/* Test */
+.home-card-game2 .card-game-top img {
+    width: 100%;
 }
