@@ -1,0 +1,36 @@
+.gamecard1{
+    display: flex;
+    justify-content: space-around; 
+    align-content: center;
+   
+   
+}
+.gamecard2{
+    display: flex;
+    justify-content: space-around;
+   
+    padding-left: 20rem;
+}
+
+.gamepodiumaccueil{    
+   text-align: center;
+   margin-top: 7rem;
+  padding-top: 1rem;
+}
+.position{
+   text-align: center;
+   margin-top: 5rem;
+}
+.firstpodium{
+    margin-left: 46.5%;
+    margin-bottom: 8rem;
+    
+}
+.secondpodium{
+    margin-left: 42%;
+    margin-bottom: 10rem;
+}
+.thirdpodium{
+    margin-left: 53%;
+    margin-bottom: 8rem;
+}
