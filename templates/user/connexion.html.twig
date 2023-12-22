@@ -1,0 +1,19 @@
+{% extends 'base.html.twig'%}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <h1>Connexion</h1>
+
+    <form class="cadreblue" action="" method=''>
+        <div class="connexion">
+            <input class="inputneonpurple" type="text" placeholder="  pseudo" name='username' autocomplete="off">
+            <input class="inputneonpurple" type="password" placeholder="  mot de passe" name='password'autocomplete="off">
+            <button class="inputneonpurple">Connexion</button>  
+        </div>
+        <div class="redirectbutton">
+            <button class="inputneonpurple">Pas encore membre ? Inscris toi !</button>
+        </div>
+    </form>
+
+{% endblock %}
