@@ -42,14 +42,14 @@ article.home-card-game {
 }
 
 .card-game-text p {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 section.home-podium {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15rem 0;
+    margin: 8rem 0;
     
 }
 
@@ -63,6 +63,8 @@ section.home-podium h2 {
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin: 3rem;
+    
 }
 
 .podium-name {
@@ -72,27 +74,29 @@ section.home-podium h2 {
 
 .podium-name * {
     position: absolute;
-}
-
-.podium-name .name1 {
-    top: 15%;
-    left: -2%;
-    transform: rotate(-20deg);
-}
-
-.podium-name .name2 {
-    top: -10%;
-    transform: translate(-50%, -50%);
     
 }
 
-.podium-name .name3 {
-    top: 25%;
-    right: 2%;
-    transform: rotate(20deg);
+.podium-name .second_place {
+    top: 15%;
+    left: -10%;
+    rotate : -20deg;
+    font-size: 2rem;
 }
 
-/* Test */
-.home-card-game2 .card-game-top img {
-    width: 100%;
+.podium-name .first_place {
+    top: -25%;
+    font-size: 2.5rem;
+    translate: -50%;
+}
+
+.podium-name .third_place {
+    top: 25%;
+    rotate: 20deg;
+    font-size: 1.5rem;
+    translate: 100%;
+}
+
+.podium-image img {
+    width: 25rem;
 }
