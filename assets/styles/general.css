@@ -121,3 +121,39 @@ p {
     margin-left: 19%;
     margin-top: 6.5%;
 }
+
+/* NAVBAR*/
+nav {
+    height: 6.5em;
+    justify-content: center;
+}
+
+.containerNavbar {
+    display:flex;
+    justify-content: space-around;
+    padding-top: none;
+}
+
+a{
+    margin-top: 2rem;
+    font-family: 'Tilt Neon', sans-serif; 
+    color: rgba(19,220,242,1);
+    font-weight: 100;
+
+    font-size: 2rem;
+} 
+
+/*FOOTER*/
+footer {  
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+   color: #13DCF2;
+   display: flex;
+   justify-content: center;
+   margin-top: 0;
+}
+
+
