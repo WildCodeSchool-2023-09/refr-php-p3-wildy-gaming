@@ -31,6 +31,9 @@ class Game
     #[ORM\OneToMany(mappedBy: 'game', targetEntity: Play::class)]
     private Collection $plays;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $isAvailable = null;
+
     public function __construct()
     {
         $this->plays = new ArrayCollection();
@@ -115,6 +118,18 @@ class Game
                 $play->setGame(null);
             }
         }
+
+        return $this;
+    }
+
+    public function isIsAvailable(): ?bool
+    {
+        return $this->isAvailable;
+    }
+
+    public function setIsAvailable(?bool $isAvailable): static
+    {
+        $this->isAvailable = $isAvailable;
 
         return $this;
     }
