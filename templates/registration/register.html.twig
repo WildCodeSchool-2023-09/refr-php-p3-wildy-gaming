@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h1>Inscription</h1>
+<div class="cadreblue">
+<div class="centre">
+<div class="forms">
+        {{ form_errors(registrationForm) }}
+
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.firstname, {'label':false,'attr': {'placeholder': 'FIRSTNAME'}})}}
+        {{ form_row(registrationForm.lastname, {'label':false,'attr': {'placeholder': 'LASTNAME'}})}}
+        {{ form_row(registrationForm.birthdate, {'label':false,'attr': {'placeholder': 'BIRTHDATE'}})}}
+        {{ form_row(registrationForm.username, {'label':false,'attr': {'placeholder': 'USERNAME'}})}}
+        {{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder': 'EMAIL'}}) }}
+        {{ form_row(registrationForm.plainPassword, {
+            'label': false,'attr': {'placeholder':'PASSWORD'}
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn">Valider</button>
+       <a href="{{ path('home') }}"><button type="submit">deja membre?</button></a>
+    {{ form_end(registrationForm) }}
+    </div></div>
+    </div>
+{% endblock %}
