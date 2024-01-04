@@ -1,14 +1,4 @@
-h3 {
-    align-content: center;
-    margin-right: 47%;
-}
-
 .info {
     display: flex;   
     align-items: center;   
-}
-
-h6 {
-    margin: 0;
-    font-size: x-large; 
 }
