@@ -14,7 +14,6 @@ section.home-podium {
 article.home-card-game {
     display: flex;
     flex-direction: column;
-
     width: 25rem;
 }
 
