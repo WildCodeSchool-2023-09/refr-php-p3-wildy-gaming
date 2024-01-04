@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lots{% endblock %}
+
+{% block body %}
+    <h1>Lots</h1>
+        <div class="containerimg">
+            <div class="palier1">
+                <img src="{{ asset('build/images/porte-cle.jpg') }}" alt="porte clé"/>
+                <img src="{{ asset('build/images/pins.webp') }}" alt="pins"/>
+            </div>
+            <div class="palier2">
+                <img src="{{ asset('build/images/peluches.jpg') }}" alt="peluches"/>
+                <img src="{{ asset('build/images/mug.jpg') }}" alt="mug"/>
+            </div>
+            <div class="palier3">
+                <img src="{{ asset('build/images/ps5.jpg') }}" alt="ps5"/>
+            </div>
+            <div class="palier4">
+                <img src="{{ asset('build/images/ps5.jpg') }}" alt="ps5"/>
+            </div>
+            <div class="palier5">
+                <img src="{{ asset('build/images/ps5.jpg') }}" alt="ps5"/>
+            </div>
+        </div>
+        <div class="containerdesc">
+            <h6>Lots à partir de 67 points</h6>
+            <p>Porte clés, pins, mug et casquette</p>
+            <h6>Lots à partir de 911 points</h6>
+            <p>Peluche, Légo, POP</p>
+            <h6>Lots à partir de 2000 points</h6>
+            <p>POP</p>
+            <h6>Lots à partir de 4000 points</h6>
+            <p>Clavier et souris</p>
+            <h6>Lots à partir de 10000 points</h6>
+            <p>PS5</p>
+        </div>
+{% endblock %}
