@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez nous{% endblock %}
+
+{% block body %}
+
+<h1> Contactez nous </h1>
+
+{{ form_errors(registrationForm) }}
+
+{{ form_start(registrationForm) }}
+{{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder': 'EMAIL'}})}}
+{{ form_row(registrationForm.message, {'label':false,'attr': {'placeholder': 'MESSAGE'}})}}
+  <button type="submit">Add category</button>
+ {{ form_end(form) }}
+ 
+ <p>Wildy Gaming <br>
+ 
+ 1 Rue des corps-de-garde, 67100 Strasbourg<br>
+
+Téléphone : 09 78 45 04 38<br>
+
+Email : contact@WildyGaming.fr.fr<br>
+
+Site Web : www.WildyGaming.fr</p>
+
+<img>{{ asset(path) }}\build\images\PROJET 3 adresse.6dfa36e0.png</img>
+
+ {% endblock %}

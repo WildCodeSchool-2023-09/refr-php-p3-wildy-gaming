@@ -4,9 +4,8 @@
 
 {% block body %}
     <h1>Inscription</h1>
-<div class="cadreblue">
-<div class="centre">
-<div class="forms">
+
+<div class="centre cadreblue">
         {{ form_errors(registrationForm) }}
 
         {{ form_start(registrationForm) }}
@@ -21,8 +20,7 @@
         {{ form_row(registrationForm.agreeTerms) }}
 
         <button type="submit" class="btn">Valider</button>
-       <a href="{{ path('home') }}"><button type="submit">deja membre?</button></a>
+      <button> <a class="btn" href="{{ path('home') }}">deja membre?</a></button>
     {{ form_end(registrationForm) }}
-    </div></div>
     </div>
 {% endblock %}
