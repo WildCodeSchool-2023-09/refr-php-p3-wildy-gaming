@@ -3,36 +3,113 @@
 {% block title %}Lots{% endblock %}
 
 {% block body %}
-    <h1>Lots</h1>
-        <div class="containerimg">
-            <div class="palier1">
-                <img src="{{ asset('build/images/porte-cle.jpg') }}" alt="porte clé"/>
-                <img src="{{ asset('build/images/pins.webp') }}" alt="pins"/>
-            </div>
-            <div class="palier2">
-                <img src="{{ asset('build/images/peluches.jpg') }}" alt="peluches"/>
-                <img src="{{ asset('build/images/mug.jpg') }}" alt="mug"/>
-            </div>
-            <div class="palier3">
-                <img src="{{ asset('build/images/ps5.jpg') }}" alt="ps5"/>
-            </div>
-            <div class="palier4">
-                <img src="{{ asset('build/images/ps5.jpg') }}" alt="ps5"/>
-            </div>
-            <div class="palier5">
-                <img src="{{ asset('build/images/ps5.jpg') }}" alt="ps5"/>
+    <h1>Les Lots</h1>
+    
+    <section class="container">
+        <a href="#" role="button" data-target="#modal" data-toggle="modal">
+            <article class="cadreblue article-lots">
+                    <div class="palier">
+                        <img src="{{ asset('build/images/porte-cle.jpg') }}" alt="porte clé"/>
+                        <img src="{{ asset('build/images/pins.webp') }}" alt="pins"/>
+                        <img src="{{ asset('build/images/mug.jpg') }}" alt="mug"/>
+                        <img src="{{ asset('build/images/casquette.jpg') }}" alt="casquette"/>
+                    </div>
+                    <div>
+                        <h2>Lots à partir de 67 points</h2>
+                        <p class="p-lot">Porte clés, Pins, Mug, Casquette</p>
+                    </div> 
+            </article>
+        </a>
+        <div class="modal" id="modal" role="dialog">
+            <div class="modal-content">
+                <div class="modal-close" data-dismiss="dialog">x</div>
+                <div class="modal-body">
+                    <img src="{{ asset('build/images/porte-cle.jpg') }}" alt="porte clé"/>
+                    <img src="{{ asset('build/images/pins.webp') }}" alt="pins"/>
+                    <img src="{{ asset('build/images/mug.jpg') }}" alt="mug"/>
+                    <img src="{{ asset('build/images/casquette.jpg') }}" alt="casquette"/>
+                </div>
+                <div class="modal-footer">
+                    <h2>Lots à partir de 67 points</h2>
+                    <p class="p-lot">Porte clés, Pins, Mug, Casquette</p>
+                    <p>Lot à retirer en boutique et claimable une seul fois. Possibilité d'échange de lot entre les joueurs.</p>
+                </div>
             </div>
         </div>
-        <div class="containerdesc">
-            <h6>Lots à partir de 67 points</h6>
-            <p>Porte clés, pins, mug et casquette</p>
-            <h6>Lots à partir de 911 points</h6>
-            <p>Peluche, Légo, POP</p>
-            <h6>Lots à partir de 2000 points</h6>
-            <p>POP</p>
-            <h6>Lots à partir de 4000 points</h6>
-            <p>Clavier et souris</p>
-            <h6>Lots à partir de 10000 points</h6>
-            <p>PS5</p>
+
+        <a href="#" role="button" data-target="#modal" data-toggle="modal">
+            <article class="cadreblue article-lots">
+                    <div class="palier">
+                        <img src="{{ asset('build/images/peluches.jpg') }}" alt="peluches"/>
+                        <img src="{{ asset('build/images/lampe-manette-xbox2.jpg') }}" alt="Lampe manette xbox2"/>
+                        <img src="{{ asset('build/images/mini_borne_arcade.jpg') }}" alt="Mini borne d'arcade"/>
+                        <img src="{{ asset('build/images/reveil-manette-ps1.jpg') }}" alt="Reveil manette PS1"/>
+                    </div>
+                    <div>
+                        <h2>Lots à partir de 911 points</h2>
+                        <p class="p-lot">Peluche, Lampe, Mini borne d'arcade, Réveil </p>
+                    </div>
+            </article>
+        </a>
+        <div class="modal" id="modal" role="dialog">
+            <div class="modal-content">
+                <div class="modal-close" data-dismiss="dialog">x</div>
+                <div class="modal-body">
+                    <img src="{{ asset('build/images/peluches.jpg') }}" alt="peluches"/>
+                    <img src="{{ asset('build/images/lampe-manette-xbox2.jpg') }}" alt="Lampe manette xbox2"/>
+                    <img src="{{ asset('build/images/mini_borne_arcade.jpg') }}" alt="Mini borne d'arcade"/>
+                    <img src="{{ asset('build/images/reveil-manette-ps1.jpg') }}" alt="Reveil manette PS1"/>
+                </div>
+                <div class="modal-footer">
+                    <h2>Lots à partir de 911 points</h2>
+                    <p class="p-lot">Peluche, Lampe, Mini borne d'arcade, Réveil </p>
+                    <p>Lot à retirer en boutique et claimable une seul fois. Possibilité d'échange de lot entre les joueurs.</p>
+                </div>
+            </div>
         </div>
+
+        <article class="cadreblue article-lots">
+                <div class="palier">
+                    <img src="{{ asset('build/images/POP-g.webp') }}" alt="POP Groot"/>
+                    <img src="{{ asset('build/images/POP-c.jpg') }}" alt="POP Cendrillon"/>
+                    <img src="{{ asset('build/images/POP-h.jpg') }}" alt="POP Hermione"/>
+                    <img src="{{ asset('build/images/POP-s.jpg') }}" alt="POP Stitch"/>
+                </div>
+                <div>
+                    <h2>Lots à partir de 2 010 points</h2>
+                    <p class="p-lot">POP</p>
+                </div>
+        </article>
+        <article class="cadreblue article-lots">
+                <div class="palier">
+                    <img src="{{ asset('build/images/clavier1.webp') }}" alt="Clavier"/>
+                    <img src="{{ asset('build/images/souris1.jpg') }}" alt="Souris"/>
+                    <img src="{{ asset('build/images/casque-gamer.jpg') }}" alt="Casque gamer"/>
+                    <img src="{{ asset('build/images/tapis-de-souris.jpg') }}" alt="Tapis de souris XL"/>
+                </div>
+                <div>
+                    <h2>Lots à partir de 4 038 points</h2>
+                    <p class="p-lot">Clavier, Souris, Casque, Tapis de souris</p>
+                </div>
+        </article>
+        <article class="cadreblue article-lots">
+                <div class="palier">
+                    <img src="{{ asset('build/images/ps5.jpg') }}" alt="ps5"/>
+                    <img src="{{ asset('build/images/Xbox.jpg') }}" alt="Xbox série X"/>
+                    <img src="{{ asset('build/images/smartphone.webp') }}" alt="Smatphone"/>
+                    <img src="{{ asset('build/images/pc.jpg') }}" alt="PC portable"/>
+                </div>
+                <div>
+                    <h2>Lots à partir de 10 001 points</h2>
+                    <p class="p-lot">PS5, Xbox série X, Smartphone, PC portable</p>
+                </div>
+        </article>
+    </section>
+
+    <section class="cadrepurple conditions">
+        <p class="p-lot">CGU:</p><p class="p-lot">Un seul lot claimables par palier, </br>une seule fois par joueur.</br>
+        Chaque lot est à retirer en boutique et est interdit à la vente.</p>
+        <p class="p-lot">Sans obligation de participation.</br>En cas de problème, veuillez nous contacter.</br>
+        Produit échangeable entre joueur mais non remboursable.</p>
+    </section>
 {% endblock %}
