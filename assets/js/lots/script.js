@@ -15,7 +15,7 @@ window.onload = () => {
 
             for(let close of modalClose){
                 close.addEventListener("click", () => {
-                  modal.classList.remove("show");
+                    modal.classList.remove("show");
                 });
             }
 
