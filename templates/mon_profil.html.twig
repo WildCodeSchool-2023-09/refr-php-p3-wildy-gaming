@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Username{% endblock %}
+
+{% block body %}
+<h1> Username</h1>
+ <div class="username">
+   {{ form_errors(Form) }}
+
+        {{ form_start(Form) }}
+        {{ form_row(Form.username, {'label':false,'attr': {'placeholder': 'USERNAME'}})}}
+        {{ form_row(orm.email, {'label':false,'attr': {'placeholder': 'EMAIL'}}) }}
+        {{ form_row(Form.plainPassword, {
+            'label': false,'attr': {'placeholder':'PASSWORD'}
+        }) }}
+        {{ form_row(Form.agreeTerms) }}
+
+        <button type="submit" class="btn">Valider</button>
+        {{ form_end(Form) }}
+        </div>
+        {% endblock %}
