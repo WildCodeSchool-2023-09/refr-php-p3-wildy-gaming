@@ -13,8 +13,8 @@ class UserController extends AbstractController
 #[Route('/mon_profil', name:'user_profil')]
     public function index(): Response 
     {
-        
-        $formUser -> $this -> createForm(User::class);
+      
+       /* $formUser -> $this -> createForm(User::class);*/
        return $this->render('/mon_profil.html.twig');
     }
 }
