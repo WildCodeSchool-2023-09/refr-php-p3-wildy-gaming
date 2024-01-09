@@ -5,7 +5,6 @@ namespace App\DataFixtures;
 use App\Entity\Lot;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-;
 
 class LotsFixtures extends Fixture
 {
@@ -37,17 +36,17 @@ class LotsFixtures extends Fixture
         10001,
     ];
 
-
-
     public function load(ObjectManager $manager): void
     {
-        foreach(self::TITLES as $object) {
+        foreach (self::TITLES as $object) {
             $lot = new Lot();
             $lot->setTitle($object);
-            $lot->setPrice(self::PRICES[rand(0,count(self::PRICES)-1)]);
+            $lot->setPrice(self::PRICES[
+                rand(0, count(self::PRICES) - 1)
+                ]);
+
             $manager->persist($lot);
         }
-  
         $manager->flush();
     }
 }

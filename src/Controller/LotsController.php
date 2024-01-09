@@ -6,13 +6,18 @@ use App\Entity\Lots;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
+use App\Repository\LotRepository;
 
 #[Route('/lots', name: 'Lots_')]
 class LotsController extends AbstractController
 {
     #[Route('/', name: 'index')]
-    public function index(): Response
+    public function index(LotRepository $lotsRepository): Response
     {
-        return $this->render('lots/index.html.twig');
+        $lots = $lotsRepository->findAll();
+
+        return $this->render('lots/index.html.twig', [
+            'lots' => $lots,
+    ]);
     }
 }
