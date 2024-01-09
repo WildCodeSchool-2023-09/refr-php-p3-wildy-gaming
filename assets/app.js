@@ -12,3 +12,7 @@ import './styles/app.scss';
 import './bootstrap';
 
 import './js/home/script';
+
+import './js/game/pacman';
+
+import'./js/game/modernizr-1.5.min';
