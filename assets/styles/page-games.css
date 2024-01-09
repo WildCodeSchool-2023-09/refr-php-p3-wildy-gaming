@@ -10,13 +10,6 @@ article.games-card-game  {
     width: 90rem;
 }
 
-
-
-/* .card-game-describe-left, .card-game-describe-right {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-} */
-
 .card-game-describe-left {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -27,8 +20,15 @@ article.games-card-game  {
     grid-template-columns: 1fr 2fr;
 }
 
-.card-game-describe {
+.card-game-describe-left .card-game-describe {
     display: flex;
+    justify-content: space-around;
+   
+}
+
+.card-game-describe-right .card-game-describe {
+    display: flex;
+    flex-direction: row-reverse;
     justify-content: space-around;
    
 }
@@ -41,15 +41,16 @@ article.games-card-game  {
 
 .card-game-preview img {
     border-radius: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
-
-
 
 .card-game-describe-right > .game-podium {
     order: -1;
 }
 
+.card-game-describe-right .card-game-description {
+    text-align: end;
+}
 
 .card-game-description {
     padding: 1.5rem;
@@ -57,6 +58,8 @@ article.games-card-game  {
 
 .card-game-description h2 {
     font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .card-game-description h4 {
@@ -65,8 +68,8 @@ article.games-card-game  {
 
 .card-game-description p {
     font-size: 1rem;
+    margin-top: 1rem;
 }
-
 
 .game-podium {
     display: flex;
@@ -76,7 +79,6 @@ article.games-card-game  {
     position: relative;
    
 }
-
 
 .game-podium-name > h4, .game-podium-name > h3 {
     position: absolute;
@@ -105,62 +107,6 @@ article.games-card-game  {
     transform: translateX(100%);
     transform-origin: 100%;
 }
-
-/* .gamecardodd {
-    box-shadow: 0px 0px 25px 10px rgba(19,220,242,0.82), inset 0px 0px 25px 5px rgba(19,220,242,0.82);
-    border: solid 3px rgba(19,220,242,0.82);
-    border-radius: 15px;
-    padding: 1rem 2rem;
-    width: 75%;
-    margin: auto;
-    display: block;
-}
-
-.gamecardodd p {
-    padding-left: 1rem;
-}
-
-.gamecard {
-    display: flex;
-}
-
-.gamepreview {
-    text-align: center;
-}
-
-.gamepreview h3 {
-    margin: 0px 1rem;
-}
-
-.gamepreview img {
-    max-width: 80%;
-    max-height: 250px;
-}
-
-.gamepodium img {
-    position: absolute;
-    max-width: 80%;
-    max-height: 250px;
-    margin-left: 7.5%;
-    margin-top: 2.5%;
-}
-
-.firstpodium {
-    position: absolute;
-    margin-left: 12%;
-}
-
-.secondpodium {
-    position: absolute;
-    margin-left: 8%;
-    margin-top: 5%;
-}
-
-.thirdpodium {
-    position: absolute;
-    margin-left: 19%;
-    margin-top: 6.5%;
-} */
 
 hr.games-separator-card {
     margin: 5rem 0;
