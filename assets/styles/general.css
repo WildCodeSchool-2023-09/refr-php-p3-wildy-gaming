@@ -18,10 +18,6 @@ body {
     color: #7B17A6;
 }
 
-main {
-    margin-top: 7rem;
-}
-
 nav, footer {
     font-family: 'Roboto', sans-serif;
     background-color: #7B17A6;
@@ -32,6 +28,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 7rem;
 }
 
 h1 {
@@ -54,9 +51,8 @@ h2, h3, h4, h5, h6 {
 }
 
 p {
-    font-size: 0.7rem;
-    text-shadow: 0 0 5px , 0 0 1px , 0 0 1px , 0 0 0px , 
-    0 0 30px , 0 0 40px , 0 0 55px , 0 0 75px; 
+    text-shadow: 0 0 5px, 0 0 1px, 0 0 1px, 0 0 0px, 
+    0 0 30px, 0 0 40px, 0 0 55px, 0 0 75px; 
 }
 
 .neonblue {
@@ -165,6 +161,7 @@ footer {
     padding: 0.8rem;
     display: flex;
     justify-content: space-around;
+    margin-top: 8rem;
 }
 
 .reseau-sociaux {
