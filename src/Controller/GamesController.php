@@ -22,8 +22,6 @@ class GamesController extends AbstractController
             $plays[$key] = $playRepository->findBy(['game' => $game->getId()], ['score' => "DESC"], 3);
         }
 
-        dump($plays);
-
         return $this->render('games/index.html.twig', [
             'games' => $games,
             'plays' => $plays,
