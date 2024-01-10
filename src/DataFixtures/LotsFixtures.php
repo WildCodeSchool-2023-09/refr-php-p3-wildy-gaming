@@ -18,8 +18,6 @@ class LotsFixtures extends Fixture
         ['title' => 'Mini borne d\'arcade', 'image' => 'mini_borne_arcade.jpg'],
         ['title' => 'Réveil', 'image' => 'reveil-manette-ps1.jpg'],
         ['title' => 'POP', 'image' => 'POP-h.jpg'],
-        ['title' => 'POP', 'image' => 'POP-c.jpg'],
-        ['title' => 'POP', 'image' => 'POP-s.jpg'],
         ['title' => 'Clavier', 'image' => 'clavier1.webp'],
         ['title' => 'Souris', 'image' => 'souris1.jpg'],
         ['title' => 'Casque', 'image' => 'casque-gamer.jpg'],

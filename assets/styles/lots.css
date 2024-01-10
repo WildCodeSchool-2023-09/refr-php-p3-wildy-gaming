@@ -35,7 +35,7 @@ h2 {
 }
 
 img {
-    margin: .5rem;
+    margin: .4rem;
 }
 
 .conditions {
@@ -86,18 +86,18 @@ hr.lots-separator-card {
 .modal-close {
     position: absolute;
     top: 0.3rem;
-    right: .5rem;
+    right: .7rem;
     font-weight: bold;
     cursor: pointer;
 }
 
 .modal-body {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     zoom: 200%;
     max-height: 80vh;
-    overflow-y: auto;
-    margin-top: .5rem;
+    overflow-x: auto;
+    margin: .5rem .3rem 0 .3rem;
 }
 
 .modal-body::-webkit-scrollbar {
@@ -126,4 +126,9 @@ hr.lots-separator-card {
 
 .modal-footer h2 {
     margin-left: 0;
+}
+
+.p-modal {
+    font-size: .55rem;
+    padding-top: .7rem;
 }

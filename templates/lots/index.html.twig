@@ -26,7 +26,7 @@
                         {% endfor %}
                     </div>
                     <div>
-                        <h2>Lots compris entre {{ limit.min }} et {{ limit.max }} points aquis</h2>
+                        <h2>Lots à gagner pour des points compris entre {{ limit.min }} et {{ limit.max }}:</h2>
                         {% for lot in lots %}
                             {% if lot.price >= limit.min and lot.price <= limit.max %}
                                 <p class="p-lot">{{ lot.title }}</p>
@@ -51,14 +51,14 @@
                     {% endfor %}
                 </div>
                 <div class="modal-footer">
-                    <h2>Lots compris entre {{ limit.min }} et {{ limit.max }} points aquis</h2>
+                    <h2>Lots à gagner pour des points compris entre {{ limit.min }} et {{ limit.max }}</h2>
                     {% for lot in lots %}
                         {% if lot.price >= limit.min and lot.price <= limit.max %}
                             <p class="p-lot">{{ lot.title }}</p>
                         {% endif %}
                     {% endfor %}
-                    <p>Lot à retirer en boutique et claimable une seule fois. Possibilité d'échange de lot entre
-                        les joueurs.</p>
+                    <p class="p-modal">Lot à retirer en boutique et claimable une seule fois.
+                        Possibilité d'échange de lot entre les joueurs.</p>
                 </div>
             </div>
         </div>
