@@ -4,58 +4,70 @@
 
 {% block body %}
     <h1>Les Lots</h1>
-    
+
     <section class="container">
 
         {% set sliceScore = {
-            'slice1':{'min':0, 'max':100},
-            'slice2':{'min':101, 'max':1000},
-            'slice3':{'min':1001, 'max':2010},
-            'slice4':{'min':2011, 'max':4038},
-            'slice5':{'min':4039, 'max':10001},
+            'slice1':{'min':67, 'max':910},
+            'slice2':{'min':911, 'max':2009},
+            'slice3':{'min':2010, 'max':4037},
+            'slice4':{'min':4038, 'max':10000},
+            'slice5':{'min':10001, 'max':100000},
         }%}
+
         {% for slice,limit in sliceScore %}
-        {% for lot in lots %}
-        {% if lot.price >= limit.min and lot.price <= limit.max %}
-        <a href="#" role="button" data-target="#modal" data-toggle="modal">
+        <a href="#" role="button" data-target="#modal{{ loop.index }}" data-toggle="modal">
             <article class="cadreblue article-lots">
                     <div class="palier">
-                        <img src="{{ asset('build/images/porte-cle.jpg') }}" alt="porte clé"/>
-                        <img src="{{ asset('build/images/pins.webp') }}" alt="pins"/>
-                        <img src="{{ asset('build/images/mug.jpg') }}" alt="mug"/>
-                        <img src="{{ asset('build/images/casquette.jpg') }}" alt="casquette"/>
+                        {% for lot in lots %}
+                            {% if lot.price >= limit.min and lot.price <= limit.max %}
+                                <img src="/uploads/lot/{{ lot.image }}" alt="{{ lot.title }}"/>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     <div>
-                        <h2>Lots à partir de {{ lot.price }} points</h2>
-                        <p class="p-lot">{{ lot.title }}</p>
-                    </div> 
+                        <h2>Lots compris entre {{ limit.min }} et {{ limit.max }} points aquis</h2>
+                        {% for lot in lots %}
+                            {% if lot.price >= limit.min and lot.price <= limit.max %}
+                                <p class="p-lot">{{ lot.title }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
             </article>
-        </a> 
-        {% endif %}   
+        </a>
+        {% if loop.last != sliceScore|length %}
+            <hr class="lots-separator-card">
+        {% endif %}
         {% endfor %}
-        {% endfor %}
-        <div class="modal" id="modal" role="dialog">
+        {% for slice,limit in sliceScore %}
+        <div class="modal" id="modal{{ loop.index }}" role="dialog">
             <div class="modal-content">
                 <div class="modal-close" data-dismiss="dialog">x</div>
                 <div class="modal-body">
-                    <img src="{{ asset('build/images/porte-cle.jpg') }}" alt="porte clé"/>
-                    <img src="{{ asset('build/images/pins.webp') }}" alt="pins"/>
-                    <img src="{{ asset('build/images/mug.jpg') }}" alt="mug"/>
-                    <img src="{{ asset('build/images/casquette.jpg') }}" alt="casquette"/>
+                    {% for lot in lots %}
+                        {% if lot.price >= limit.min and lot.price <= limit.max %}
+                            <img src="/uploads/lot/{{ lot.image }}" alt="{{ lot.title }}"/>
+                        {% endif %}
+                    {% endfor %}
                 </div>
                 <div class="modal-footer">
-                    <h2>Lots à partir de 67 points</h2>
-                    <p class="p-lot">Porte clés, Pins, Mug, Casquette</p>
-                    <p>Lot à retirer en boutique et claimable une seul fois. Possibilité d'échange de lot entre les joueurs.</p>
+                    <h2>Lots compris entre {{ limit.min }} et {{ limit.max }} points aquis</h2>
+                    {% for lot in lots %}
+                        {% if lot.price >= limit.min and lot.price <= limit.max %}
+                            <p class="p-lot">{{ lot.title }}</p>
+                        {% endif %}
+                    {% endfor %}
+                    <p>Lot à retirer en boutique et claimable une seule fois. Possibilité d'échange de lot entre
+                        les joueurs.</p>
                 </div>
             </div>
         </div>
-    
+        {% endfor %}
     </section>
 
     <section class="cadrepurple conditions">
-        <p class="p-lot">CGU:</p><p class="p-lot">Un seul lot claimables par palier, </br>une seule fois par joueur.</br>
-        Chaque lot est à retirer en boutique et est interdit à la vente.</p>
+        <p class="p-lot">CGU:</p><p class="p-lot">Un seul lot claimables par palier, </br>une seule fois par joueur.
+            </br>Chaque lot est à retirer en boutique et est interdit à la vente.</p>
         <p class="p-lot">Sans obligation de participation.</br>En cas de problème, veuillez nous contacter.</br>
         Produit échangeable entre joueur mais non remboursable.</p>
     </section>
