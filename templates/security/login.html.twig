@@ -17,7 +17,7 @@
     <h1>Connexion</h1>
         <div class="cadreblue">
             <div class="connexion">
-                <input type="email" placeholder="  email" value="{{ last_username }}" name="username" id="username" class="inputneonpurple" autocomplete="off" required autofocus>
+                <input type="email" placeholder="  email" value="{{ last_username }}" name="email" id="email" class="inputneonpurple" autocomplete="off" required autofocus>
                 <input type="password" placeholder="  mot de passe" name="password" id="inputPassword" class="inputneonpurple" autocomplete="off" required>
                 <input type="hidden" name="_csrf_token"
                     value="{{ csrf_token('authenticate') }}">
