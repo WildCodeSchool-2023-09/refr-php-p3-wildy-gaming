@@ -18,6 +18,6 @@ class LotsController extends AbstractController
 
         return $this->render('lots/index.html.twig', [
             'lots' => $lots,
-    ]);
+        ]);
     }
 }
