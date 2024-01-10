@@ -18,10 +18,6 @@ body {
     color: #7B17A6;
 }
 
-main {
-    margin-top: 7rem;
-}
-
 nav, footer {
     font-family: 'Roboto', sans-serif;
     background-color: #7B17A6;
@@ -32,6 +28,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 7rem;
 }
 
 h1 {
@@ -164,6 +161,7 @@ footer {
     padding: 0.8rem;
     display: flex;
     justify-content: space-around;
+    margin-top: 8rem;
 }
 
 .reseau-sociaux {
