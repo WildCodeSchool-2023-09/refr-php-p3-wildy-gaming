@@ -20,8 +20,7 @@ class UserController extends AbstractController
       if( $form->isSubmitted() && $form->isValid())
       { 
       $entityManager->flush();
-      $this->addFlash("success", "votre modification a bien été prise en compte");
       }
-       return $this->render('/mon_profil.html.twig',["form"=> $form]);
+       return $this->render('/mon_profil.html.twig',["form"=>$form]);
     }
 }
