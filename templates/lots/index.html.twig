@@ -51,13 +51,13 @@
                     {% endfor %}
                 </div>
                 <div class="modal-footer">
-                    <h2>Lots à gagner pour des points compris entre {{ limit.min }} et {{ limit.max }}</h2>
+                    <h2>Lots à gagner pour des points compris entre {{ limit.min }} et {{ limit.max }}:</h2>
                     {% for lot in lots %}
                         {% if lot.price >= limit.min and lot.price <= limit.max %}
                             <p class="p-lot">{{ lot.title }}</p>
                         {% endif %}
                     {% endfor %}
-                    <p class="p-modal">Lot à retirer en boutique et claimable une seule fois.
+                    <p class="p-modal">Lot à retirer en boutique et récupérable une seule fois.
                         Possibilité d'échange de lot entre les joueurs.</p>
                 </div>
             </div>
@@ -66,7 +66,7 @@
     </section>
 
     <section class="cadrepurple conditions">
-        <p class="p-lot">CGU:</p><p class="p-lot">Un seul lot claimables par palier, </br>une seule fois par joueur.
+        <p class="p-lot">CGU:</p><p class="p-lot">Un seul lot récupérable par palier, </br>une seule fois par joueur.
             </br>Chaque lot est à retirer en boutique et est interdit à la vente.</p>
         <p class="p-lot">Sans obligation de participation.</br>En cas de problème, veuillez nous contacter.</br>
         Produit échangeable entre joueur mais non remboursable.</p>
