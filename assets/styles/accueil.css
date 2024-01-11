@@ -41,13 +41,14 @@ article.home-card-game {
 
 .card-game-text p {
     font-size: 1.2rem;
+    color: rgba(123, 23, 166, 0.82)
 }
 
 section.home-podium {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 8rem 0;   
+    margin-top: 8rem;   
 }
 
 section.home-podium h2 {
