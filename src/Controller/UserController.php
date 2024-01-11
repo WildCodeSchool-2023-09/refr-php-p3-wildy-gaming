@@ -23,4 +23,13 @@ class UserController extends AbstractController
       }
        return $this->render('/mon_profil.html.twig',["form"=>$form]);
     }
+  /*  public function delete(Request $request, $id)
+    {
+        $form = $this->DeleteForm("id");
+        $form->submit($request);
+            $em->remove($entity);
+            $em->flush();
+     }
+        return $this->redirect('/mon_profil.html.twig');*/
+    
 }

@@ -4,16 +4,30 @@
 
 {% block body %}
 <h1> Mon profil</h1>
- <div class="username cadreblue">
-
-        {{ form_start(form) }}
-        {{ form_errors(form) }}
-        {{ form_row(form.firstname, {'label':false,'attr': {'placeholder': 'FIRSTNAME'}})}}
-        {{ form_row(form.lastname, {'label':false,'attr': {'placeholder': 'LASTNAME'}}) }}
-        {{ form_row(form.birthdate, {'label':false,'attr': {'placeholder': 'BIRTHDATE'}})}}
-        {{ form_row(form.username, {'label':false,'attr': {'placeholder': 'USERNAME'}})}}
-        {{ form_row(form.email, {'label':false,'attr': {'placeholder': 'EMAIL'}}) }}
+ <div class="username">
+           {{ form_start(form) }}
+           {{ form_errors(form) }}
+    <div class="monprofilfirstname">    
+           {{ form_row(form.firstname, {'label':false,'attr': {'placeholder': 'PRENOM'}})}}
+    </div>
+    <div class="monprofillastname">  
+           {{ form_row(form.lastname, {'label':false,'attr': {'placeholder': 'NOM'}}) }}
+     </div>
+     <div class="monprofilbirthdate">  
+           {{ form_row(form.birthdate, {'label':false,'attr': {'placeholder': 'BIRTHDATE'}})}}
+      </div>
+      <div class="monprofilusername">
+           {{ form_row(form.username, {'label':false,'attr': {'placeholder': 'PSEUDO'}})}}
+      </div> 
+      <div class="monprofilemail">
+           {{ form_row(form.email, {'label':false,'attr': {'placeholder': 'EMAIL'}}) }}
+      </div>
+      <div class="monprofiltype">
                  <button type="submit" class="btn">Valider</button>
-        {{ form_end(form) }}
- </div>
+      </div>
+      <div class="buttondelete">
+                 <button type="submit" id="delete" name="delete"> supprimer le compte</button>
+      </div>
+           {{ form_end(form) }}
+      </div>
         {% endblock %}
