@@ -21,12 +21,12 @@
                     <div class="palier">
                         {% for lot in lots %}
                             {% if lot.price >= limit.min and lot.price <= limit.max %}
-                                <img src="/uploads/lot/{{ lot.image }}" alt="{{ lot.title }}"/>
+                                <img class="img-lot" src="/uploads/lot/{{ lot.image }}" alt="{{ lot.title }}"/>
                             {% endif %}
                         {% endfor %}
                     </div>
                     <div>
-                        <h2>Lots à gagner pour des points compris entre {{ limit.min }} et {{ limit.max }}:</h2>
+                        <h2 class="h2-lot">Lots à gagner pour des points compris entre {{ limit.min }} et {{ limit.max }}:</h2>
                         {% for lot in lots %}
                             {% if lot.price >= limit.min and lot.price <= limit.max %}
                                 <p class="p-lot">{{ lot.title }}</p>
@@ -46,12 +46,12 @@
                 <div class="modal-body">
                     {% for lot in lots %}
                         {% if lot.price >= limit.min and lot.price <= limit.max %}
-                            <img src="/uploads/lot/{{ lot.image }}" alt="{{ lot.title }}"/>
+                            <img class="img-lot" src="/uploads/lot/{{ lot.image }}" alt="{{ lot.title }}"/>
                         {% endif %}
                     {% endfor %}
                 </div>
                 <div class="modal-footer">
-                    <h2>Lots à gagner pour des points compris entre {{ limit.min }} et {{ limit.max }}:</h2>
+                    <h2 class="h2-lot">Lots à gagner pour des points compris entre {{ limit.min }} et {{ limit.max }}:</h2>
                     {% for lot in lots %}
                         {% if lot.price >= limit.min and lot.price <= limit.max %}
                             <p class="p-lot">{{ lot.title }}</p>
