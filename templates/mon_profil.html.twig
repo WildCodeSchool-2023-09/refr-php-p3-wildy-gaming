@@ -3,19 +3,16 @@
 {% block title %}Username{% endblock %}
 
 {% block body %}
-<h1> Username</h1>
- <div class="username">
+<h1> Mon profil</h1>
+ <div class="username cadreblue">
 
         {{ form_start(form) }}
         {{ form_errors(form) }}
-        {{ form_row(form.name, {'label':false,'attr': {'placeholder': 'NAME'}})}}
+        {{ form_row(form.firstname, {'label':false,'attr': {'placeholder': 'FIRSTNAME'}})}}
         {{ form_row(form.lastname, {'label':false,'attr': {'placeholder': 'LASTNAME'}}) }}
         {{ form_row(form.birthdate, {'label':false,'attr': {'placeholder': 'BIRTHDATE'}})}}
         {{ form_row(form.username, {'label':false,'attr': {'placeholder': 'USERNAME'}})}}
         {{ form_row(form.email, {'label':false,'attr': {'placeholder': 'EMAIL'}}) }}
-        {{ form_row(form.plainPassword, {'label': false,'attr': {'placeholder':'PASSWORD'}
-        }) }}
-        {{ form_row(form.agreeTerms) }}
                  <button type="submit" class="btn">Valider</button>
         {{ form_end(form) }}
  </div>
