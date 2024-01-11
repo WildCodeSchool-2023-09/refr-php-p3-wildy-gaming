@@ -4,23 +4,32 @@
 
 {% block body %}
     <h1>Inscription</h1>
-
-<div class="centre cadreblue">
-       
+    <div class="centre cadreblue">   
         {{ form_start(registrationForm) }}
         {{ form_errors(registrationForm) }}
+    <div class="form-name">
         {{ form_row(registrationForm.firstname, {'label':false,'attr': {'placeholder': 'FIRSTNAME'}})}}
         {{ form_row(registrationForm.lastname, {'label':false,'attr': {'placeholder': 'LASTNAME'}})}}
+    </div>
+ ,  <div class="form-birthdate">
         {{ form_row(registrationForm.birthdate, {'label':false,'attr': {'placeholder': 'BIRTHDATE'}})}}
-        {{ form_row(registrationForm.username, {'label':false,'attr': {'placeholder': 'USERNAME'}})}}
+    </div>
+    <div class="form-email">
         {{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder': 'EMAIL'}}) }}
+    </div>
+    <div class="form-player">   
+        {{ form_row(registrationForm.username, {'label':false,'attr': {'placeholder': 'USERNAME'}})}}
         {{ form_row(registrationForm.plainPassword, {
             'label': false,'attr': {'placeholder':'PASSWORD'}
         }) }}
+    </div>
+    <div class="form-agree">
         {{ form_row(registrationForm.agreeTerms) }}
-
+    </div>
+    <div class="form-button">
         <button type="submit" class="btn">Valider</button>
-      <button> <a class="btn" href="{{ path('home') }}">deja membre?</a></button>
+      <button> <a class="btn" href="">deja membre?</a></button>
+    </div>
     {{ form_end(registrationForm) }}
     </div>
 {% endblock %}

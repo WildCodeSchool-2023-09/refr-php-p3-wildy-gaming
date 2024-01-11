@@ -1,11 +1,5 @@
 
 
-.centre{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  margin: 5rem 0;
-}
 
 button {   
        color: rgba(123, 23, 166, 0.82);    
@@ -36,4 +30,48 @@ input, select, textarea {
   .inputneonpurple {     
     box-shadow: 0px 0px 7px 2.5px rgba(123, 23, 166, 0.82);     
     border: solid 3px rgba(123, 23, 166, 0.82);     
-    border-radius: 50px; }
+    border-radius: 50px; 
+  }
+.cadreblue {
+  margin-right: 30rem;
+  margin-left: 30rem;
+}
+  .centre cadreblue {
+display: flex;
+justify-content: center;
+  }
+
+  .form-name {
+   display: flex;
+    flex-direction: row;
+    justify-content:space-around;  
+    width:100%; 
+   } 
+
+  .form-player {
+    display:flex;
+    flex:1;
+    justify-content:space-around;
+  }
+
+  .form-birthdate {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form-email {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-agree {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-button {
+    display:flex;
+    flex:1;
+    justify-content:space-around;
+  }
