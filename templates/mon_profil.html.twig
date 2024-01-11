@@ -24,10 +24,12 @@
       </div>
       <div class="monprofiltype">
                  <button type="submit" class="btn">Valider</button>
-      </div>
-      <div class="buttondelete">
-                 <button type="submit" id="delete" name="delete"> supprimer le compte</button>
-      </div>
+       </div>
            {{ form_end(form) }}
       </div>
+      <form method="POST" action="{{ path('user_delete', {id:app.user.id})}}"> 
+      <div class="buttondelete">
+                <input type="hidden" name="_token" value="{{csrf_token(app.user.id)}}"><button type="submit"  > supprimer le compte</button>
+              </div>
+       </form>   
         {% endblock %}

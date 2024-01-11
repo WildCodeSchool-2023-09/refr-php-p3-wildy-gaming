@@ -7,13 +7,13 @@ use Doctrine\ORM\Mapping\Entity;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class UserController extends AbstractController
 {
-#[Route('/mon_profil', name:'user_profil')]
-    public function index(UserInterface $user, Request $request, EntityManagerInterface $entityManager ): Response 
+#[Route('/mon_profil/{id}', name:'user_profil')]
+    public function index(User $user, Request $request, EntityManagerInterface $entityManager ): Response 
     {
       $form=  $this->createForm(ProfileUserType::class, $user);
       $form->handleRequest($request);
@@ -21,15 +21,17 @@ class UserController extends AbstractController
       { 
       $entityManager->flush();
       }
-       return $this->render('/mon_profil.html.twig',["form"=>$form]);
+       return $this->render('/mon_profil.html.twig',["form"=>$form]);  
     }
-  /*  public function delete(Request $request, $id)
+
+    #[Route('/user/{id}', name:'user_delete', methods:['POST'])]
+    public function delete(Request $request, User $user, EntityManagerInterface $em, TokenStorageInterface $token): Response
     {
-        $form = $this->DeleteForm("id");
-        $form->submit($request);
-            $em->remove($entity);
-            $em->flush();
-     }
-        return $this->redirect('/mon_profil.html.twig');*/
-    
+        if($this->isCsrfTokenValid($user->getId(),$request->request->get('_token'))){
+          $token->setToken(null);
+          $em->remove($user);
+          $em->flush();
+      }
+      return $this->redirectToRoute('app_login',[], Response::HTTP_SEE_OTHER);     
+    }  
 }
