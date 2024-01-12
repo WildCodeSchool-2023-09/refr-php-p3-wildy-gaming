@@ -11,11 +11,11 @@
         {{ form_row(registrationForm.firstname, {'label':false,'attr': {'placeholder': 'FIRSTNAME'}})}}
         {{ form_row(registrationForm.lastname, {'label':false,'attr': {'placeholder': 'LASTNAME'}})}}
     </div>
- ,  <div class="form-birthdate">
+    <div class="form-birthdate">
         {{ form_row(registrationForm.birthdate, {'label':false,'attr': {'placeholder': 'BIRTHDATE'}})}}
     </div>
     <div class="form-email">
-        {{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder': 'EMAIL'}}) }}
+        {{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder':'EMAIL'}}) }}
     </div>
     <div class="form-player">   
         {{ form_row(registrationForm.username, {'label':false,'attr': {'placeholder': 'USERNAME'}})}}
@@ -27,8 +27,12 @@
         {{ form_row(registrationForm.agreeTerms) }}
     </div>
     <div class="form-button">
+    <div class="form-buttonvalide">
         <button type="submit" class="btn">Valider</button>
+    </div>
+    <div class="formbuttondeja">
       <button> <a class="btn" href="">deja membre?</a></button>
+    </div>
     </div>
     {{ form_end(registrationForm) }}
     </div>
