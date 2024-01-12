@@ -2,22 +2,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  margin: 5rem ;   
+    margin: 5rem ;
+ 
+border-radius: 21px; 
+    padding-left: 12rem;  
 }
 
 .contacte {
     display: flex;
- justify-content:flex-start;
-  margin: 5rem 0;
-  padding-right: 10rem;
+    justify-content:flex-start;
+    margin: 5rem 0;
+    padding-right: 10rem;
 }
 
 .center {
-display: flex;
-justify-content: center;
-padding-bottom: 7rem;
-padding-top: 7rem;
-padding-left: 10rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 7rem;
+    padding-top: 7rem;
+    padding-left: 10rem;
 }
 
 .contacte {
@@ -38,16 +41,19 @@ input, select, textarea {
     border-color: rgba(123, 23, 166, 0.82);
  } 
  
-  .inputneonpurple {     
+.inputneonpurple {     
     box-shadow: 0px 0px 7px 2.5px rgba(123, 23, 166, 0.82);     
     border: solid 3px rgba(123, 23, 166, 0.82);     
-    border-radius: 50px; }
+    border-radius: 50px;
+}
+
     button:hover {  
     background-color: rgba(123, 23, 166, 0.82);
     color:#061828; 
 }
 
 .cartes {
-margin-right: 5rem;
-padding-left: 10rem;
+    margin-right: 5rem;
+    padding-left: 10rem;
 }
+
