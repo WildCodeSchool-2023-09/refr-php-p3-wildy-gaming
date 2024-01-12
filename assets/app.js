@@ -14,3 +14,5 @@ import './bootstrap';
 import './js/home/script';
 
 import './js/lots/script';
+
+import './js/games/snake';
