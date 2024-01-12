@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Planet Defense{% endblock %}
+
+
+{% block body %}
+
+    <h1>{{ game.name }}</h1>
+
+    <section class="details-game">
+        <div class="play-game">
+            <canvas class="{{ game.slug }}" id="{{ game.slug }}"></canvas>
+        </div>
+    
+        <div class="game-describe">
+            <div>
+                <h2>Catégorie : {{ game.category.name }}</h2>
+                <h2>Description du jeu</h2>
+                <p>{{ game.description }}</p>
+            
+            </div>
+            <div class=""></div>
+
+        </div>
+    </section>
+
+{% endblock %}
