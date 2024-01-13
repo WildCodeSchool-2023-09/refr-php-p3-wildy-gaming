@@ -4,17 +4,17 @@ let score = 0
 
 const context = canvas.getContext('2d')
 
-/*const background = new Image()
-background.src = 'background.png'
+const background = new Image()
+background.src = 'snake/background.png'
 
 const foodImg = new Image()
-foodImg.src  = 'food.png'
+foodImg.src  = 'snake/food.png'
 
 const eatAudio = new Audio()
-eatAudio.src = 'eat.mp3'
+eatAudio.src = 'snake/eat.mp3'
 
 const deadAudio = new Audio()
-deadAudio.src = 'dead.mp3'*/
+deadAudio.src = 'snake/dead.mp3'
 
 const unit = 30
 
@@ -72,7 +72,7 @@ function draw()
     let snakeY = snake[0].y
 
 
-  //mager la pomme
+    //mager la pomme
     if (snakeX == food.x && snakeY == food.y) {
         food = {
             x:Math.floor(Math.random() * 19 + 1) * unit,

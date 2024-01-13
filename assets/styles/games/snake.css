@@ -5,3 +5,32 @@ canvas {
     transform: translate(-50%,-50%);
     border: 2px solid;
 }
+
+.h2-snake {
+    text-align: center;
+}
+
+.replay {
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 12.5rem;
+    height: 3rem;
+    color: white;
+    background: #13DCF2;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition-delay: 0.2s;
+}
+
+.replay:hover {
+    color: white;
+    background: #7B17A6;
+    border-radius: .6rem;
+}
