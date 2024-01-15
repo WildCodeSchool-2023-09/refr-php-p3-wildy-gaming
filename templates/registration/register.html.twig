@@ -3,25 +3,33 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Inscription</h1>
+    <h1 class="inscription">Inscription</h1>
     <div class="centre cadreblue">   
         {{ form_start(registrationForm) }}
         {{ form_errors(registrationForm) }}
     <div class="form-name">
-        {{ form_row(registrationForm.firstname, {'label':false,'attr': {'placeholder': 'FIRSTNAME'}})}}
-        {{ form_row(registrationForm.lastname, {'label':false,'attr': {'placeholder': 'LASTNAME'}})}}
+    <div class="form-firstname">
+        {{ form_row(registrationForm.firstname, {'label':false,'attr': {'placeholder': ' Prenom',"class":"form-firstname"}})}}
+    </div>
+    <div class="form-lastname">
+        {{ form_row(registrationForm.lastname, {'label':false,'attr': {'placeholder': '  Nom',"class":"form-lastname" }})}}
+    </div>
     </div>
     <div class="form-birthdate">
-        {{ form_row(registrationForm.birthdate, {'label':false,'attr': {'placeholder': 'BIRTHDATE'}})}}
+        {{ form_row(registrationForm.birthdate, {'label':false,'attr': {'placeholder': '  Date de naissance',"class":"form-birthdate"}})}}
     </div>
     <div class="form-email">
-        {{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder':'EMAIL'}}) }}
+        {{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder':'  Email',"class":"form-email"}}) }}
     </div>
-    <div class="form-player">   
-        {{ form_row(registrationForm.username, {'label':false,'attr': {'placeholder': 'USERNAME'}})}}
+    <div class="form-player"> 
+    <div class="form-username">  
+        {{ form_row(registrationForm.username, {'label':false,'attr': {'placeholder': '  Pseudo',"class":"form-username"}})}}
+     </div>  
+     <div class="form-password">  
         {{ form_row(registrationForm.plainPassword, {
-            'label': false,'attr': {'placeholder':'PASSWORD'}
+            'label': false,'attr': {'placeholder':'  Mot de passe',"class":"form-password"}
         }) }}
+    </div>    
     </div>
     <div class="form-agree">
         {{ form_row(registrationForm.agreeTerms) }}
