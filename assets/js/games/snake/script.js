@@ -34,21 +34,21 @@ snake[0] = {
 let d
 document.addEventListener('keydown', (e) => {
     let key = e.keyCode;
-    if (key === 37 && d !== "R") {
+    if (key == 37 && d != "R") {
         d = "L"
-    } else if (key === 38 && d !== "D") {
+    } else if (key == 38 && d != "D") {
         d = "U"
-    } else if (key === 39 && d !== "L") {
+    } else if (key == 39 && d != "L") {
         d = "R"
-    } else if (key === 40 && d !== "U") {
+    } else if (key == 40 && d != "U") {
         d = "D"
     }
-
 })
+
 function collisionBody(head,snake)
 {
     for (let index = 0; index < snake.length; index++) {
-        if (head.x === snake[index].x && head.y === snake[index].y) {
+        if (head.x == snake[index].x && head.y == snake[index].y) {
             return true
         }
     }
@@ -58,7 +58,7 @@ function draw()
 {
     context.drawImage(background,0,0)
     for (let index = 0; index < snake.length; index++) {
-        if (index === 0) {
+        if (index == 0) {
             context.fillStyle = "black"
         } else {
             context.fillStyle = "red"
@@ -75,7 +75,7 @@ function draw()
 
 
     //manger la pomme
-    if (snakeX === food.x && snakeY === food.y) {
+    if (snakeX == food.x && snakeY == food.y) {
         food = {
             x:Math.floor(Math.random() * 19 + 1) * unit,
             y:Math.floor(Math.random() * 19 + 1) * unit
@@ -86,16 +86,16 @@ function draw()
         snake.pop()
     }
 
-    if(d=="L"){
+    if (d=="L"){
       snakeX -=unit
     }
-    if(d=="U") {
+    if (d=="U") {
       snakeY -= unit
     }
-    if(d=="R") {
+    if (d=="R") {
       snakeX += unit
     }
-    if(d=="D") {
+    if (d=="D") {
       snakeY += unit
     }
 
@@ -104,8 +104,11 @@ function draw()
         y:snakeY
     }
     //les collisions
-    if(snakeX<=-unit || snakeX>=canvas.width || snakeY<=-unit || snakeY>=canvas.height ||
-      collisionBody(newHead,snake)){
+    if (snakeX <= -unit ||
+      snakeX >= canvas.width ||
+      snakeY <= -unit ||
+      snakeY >= canvas.height ||
+      collisionBody(newHead,snake)) {
         clearInterval(play)
         /*deadAudio.play()*/
     }
