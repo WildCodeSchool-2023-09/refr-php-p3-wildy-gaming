@@ -5,8 +5,8 @@
 {% block body %}
 <h1> Contactez nous</h1>
     <div class="contact">
-        {{ form_start(formContact,) }}
-        {{ form_widget(formContact,) }}
+        {{ form_start(formContact, {'label':false,'attr': {'placeholder': '',"class":"formContact"}})}}
+        {{ form_widget(formContact, {'label':false,'attr': {'placeholder': '',"class":"formContact"}})}}
           <button type="submit" class="btn">Valider</button>
         {{ form_end(formContact) }}
     </div>
