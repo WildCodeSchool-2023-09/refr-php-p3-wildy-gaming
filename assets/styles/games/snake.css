@@ -1,21 +1,21 @@
 canvas {
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    transform: translate(-50%,-50%);
-    border: 2px solid;
+    border: 2px solid white;
+    margin: 0 auto;
 }
 
 .h2-snake {
     text-align: center;
 }
 
+.snakegame {
+    display: flex;
+    flex-direction: column;
+}
+
+/* bouton */
 .replay {
     display: none;
     font-family: 'Roboto', sans-serif;
-    position: absolute;
-    top: 50%;
-    left: 45%;
     width: 12.5rem;
     height: 3rem;
     color: white;

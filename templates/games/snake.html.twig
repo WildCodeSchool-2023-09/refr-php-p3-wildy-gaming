@@ -5,7 +5,8 @@
 {% block body %}
     <h1>Snake</h1>
     <h2 class="h2-snake">Score : <span class="score">0</span></h2>
-    <canvas id="canvas" width="38rem" height="38rem"></canvas>
-    <button class="replay" onclick="clickButton()">Rejouer</button>
-    <script src="script.js"></script>
+    <div class="snakegame">
+        <canvas id="snake" width="600" height="600"></canvas>
+        <button class="replay" onclick="clickButton()">Rejouer</button>
+    </div>
 {% endblock %}

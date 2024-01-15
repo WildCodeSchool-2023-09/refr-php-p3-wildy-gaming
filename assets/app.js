@@ -15,4 +15,4 @@ import './js/home/script';
 
 import './js/lots/script';
 
-import './js/games/snake';
+import './js/games/snake/script';

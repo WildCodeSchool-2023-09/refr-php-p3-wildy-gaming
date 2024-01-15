@@ -28,12 +28,12 @@ class GamesController extends AbstractController
         ]);
     }
 
-    #[Route('/games', name: 'games_show', methods: ['GET'])]
+    #[Route('/snake', name: 'games_show', methods: ['GET'])]
     public function show(GameRepository $gameRepository): Response
     {
         $games = $gameRepository->findAll();
 
-        return $this->render('games/snake.htlm.twig', [
+        return $this->render('games/snake.html.twig', [
             'games' => $games,]);
     }
 }
