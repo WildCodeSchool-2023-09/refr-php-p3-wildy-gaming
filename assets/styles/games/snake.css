@@ -11,29 +11,6 @@ canvas {
 }
 
 /* boutons */
-/*.play {
-    border-radius: .6rem;
-    box-shadow: 0px 0px 10px 10px #13DCF2;
-    border: none;
-    width: 12.5rem;
-    height: 3rem;
-    background: #7B17A6;
-    color: #13DCF2;
-    font-family: 'Tilt Neon', sans-serif;
-    font-size: 1.8rem;
-    letter-spacing: 0.1rem;
-    cursor: pointer;
-    margin-top: 0;
-}
-
-.play:hover {
-    background: #13DCF2;
-    color: #7B17A6;
-    font-weight: bold;
-    font-size: 2.1rem;
-    box-shadow: none;
-}*/
-
 .replay {
     border: none;
     border-radius: 0.6rem;

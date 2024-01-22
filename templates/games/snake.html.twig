@@ -4,8 +4,9 @@
 
 {% block body %}
     <h1>Snake</h1>
-    <h2 class="h2-snake">Score : <span class="score">0</span></h2>
-    {#  <button class="play" onclick="clickButton()">Jouer</button> #}
-    <canvas id="snake" width="600" height="600"></canvas>
-    <button class="replay" onclick="clickButton()">Rejouer</button>
+    <div id="snakegame">
+        <h2 class="h2-snake">Score : <span class="score">0</span></h2>
+        <canvas id="snake" width="600" height="600"></canvas>
+        <button class="replay" onclick="clickButton()">Rejouer</button>
+    </div>
 {% endblock %}

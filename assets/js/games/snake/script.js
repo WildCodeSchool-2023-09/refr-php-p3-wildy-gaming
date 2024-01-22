@@ -86,16 +86,16 @@ function draw()
         snake.pop()
     }
 
-    if (d=="L"){
-      snakeX -=unit
+    if (d == "L") {
+      snakeX -= unit
     }
-    if (d=="U") {
+    if (d == "U") {
       snakeY -= unit
     }
-    if (d=="R") {
+    if (d == "R") {
       snakeX += unit
     }
-    if (d=="D") {
+    if (d == "D") {
       snakeY += unit
     }
 
