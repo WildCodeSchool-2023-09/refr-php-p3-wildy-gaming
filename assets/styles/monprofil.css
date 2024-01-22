@@ -5,32 +5,47 @@ justify-content: center;
 
 .monprofilfirstname {
     margin-bottom: 2rem;
-    border-radius: 50px 50px 50px 50px;
-    -moz-border-radius: 50px 50px 50px 50px;
-     -webkit-border-radius: 50px 50px 50px 50px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
 }
 
 .monprofillastname {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
 }
 
 .monprofilbirthdate {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
 }
 
 .monprofilusername {
-    margin-bottom: 1rem;  
+    margin-bottom: 2rem; 
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px; 
 }
 
 .monprofiltype {
     display: flex;
     justify-content: center;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
    
 }
 
 .buttondelete {
     display: flex;
     justify-content: center;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
 }
 
 input, select, textarea {     
