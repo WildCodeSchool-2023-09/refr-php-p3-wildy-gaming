@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Play;
 use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -37,6 +38,19 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $user->setPassword($newHashedPassword);
         $this->getEntityManager()->persist($user);
         $this->getEntityManager()->flush();
+    }
+
+    public function bestThreePlayers(): ?array
+    {
+
+        $querybuilder = $this->createQueryBuilder('u')
+            ->join("u.plays", "p")
+            ->select(["u.username", "SUM(p.score) as totalScorePlayer"])
+            ->groupBy("u.username")
+            ->orderBy("totalScorePlayer", "DESC")
+            ->setMaxResults(3)
+            ->getQuery();
+        return $querybuilder->getResult();
     }
 
 //    /**

@@ -43,9 +43,15 @@
         <h2 class="">Ce sont les meilleurs !</h2>
             <div class="podium">
                 <div class="podium-name">
-                    <h4 class="second-place">Steph_UwU</h4>
-                    <h3 class="first-place">xXxBaptisteLeBossxXx</h3>
-                    <h4 class="third-place">DarkSajid</h4>
+                    {% for key, bestPlayer in bestPlayers %}
+                        {% if key == 0 %}
+                            <h3 class="first-place">{{ bestPlayer.username }}</h3>
+                        {% elseif key == 1 %}
+                            <h4 class="second-place">{{ bestPlayer.username }}</h4>
+                        {% elseif key == 2 %}
+                            <h4 class="third-place">{{ bestPlayer.username }}</h4>
+                        {% endif %}
+                    {% endfor %}
                 </div>
                 <div class="podium-image">
                     <img src="{{ asset('build/images/podium.png') }}">
