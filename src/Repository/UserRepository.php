@@ -48,7 +48,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
             ->select(["u.username", "SUM(p.score) as totalScorePlayer"])
             ->groupBy("u.username")
             ->orderBy("totalScorePlayer", "DESC")
-            ->setMaxResults(3)
+            ->setMaxResults(10)
             ->getQuery();
         return $querybuilder->getResult();
     }

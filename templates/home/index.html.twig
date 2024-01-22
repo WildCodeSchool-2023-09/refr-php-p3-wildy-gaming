@@ -43,7 +43,7 @@
         <h2 class="">Ce sont les meilleurs !</h2>
             <div class="podium">
                 <div class="podium-name">
-                    {% for key, bestPlayer in bestPlayers %}
+                    {% for key, bestPlayer in bestPlayers|slice(0, 3) %}
                         {% if key == 0 %}
                             <h3 class="first-place">{{ bestPlayer.username }}</h3>
                         {% elseif key == 1 %}
@@ -56,6 +56,31 @@
                 <div class="podium-image">
                     <img src="{{ asset('build/images/podium.png') }}">
                 </div>
+            </div>
+            <div>
+                <table>
+                    <tbody>
+                        {% for bestPlayer in bestPlayers|slice(0, 10) %}
+                            <tr>
+                                <td>
+                                    <p>
+                                        {% if loop.index == 1 %}
+                                            {{ loop.index }}ST
+                                        {% elseif loop.index == 2 %}
+                                            {{ loop.index }}ND
+                                        {% elseif loop.index == 3 %}
+                                            {{ loop.index }}RD
+                                        {% else %}
+                                            {{ loop.index }}TH
+                                        {% endif %}
+                                    </p>
+                                </td>
+                                <td><p class="{% if bestPlayer.username == app.user %} user-connected-score {% endif %}">{{ bestPlayer.username }}</p></td>
+                                <td><p>{{ bestPlayer.totalScorePlayer }}</p></td>
+                            </tr>                            
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
     </section>
 {% endblock %}
