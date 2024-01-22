@@ -57,8 +57,15 @@
                     <img src="{{ asset('build/images/podium.png') }}">
                 </div>
             </div>
-            <div>
-                <table>
+            <div class="home-score-best-players">
+                <table class="home-score-player">
+                    <thead>
+                        <tr>
+                            <th><h3>Rang</h3</th>
+                            <th><h3>Pseudo</h3></th>
+                            <th><h3>Score</h3></th>
+                        </tr>
+                    </thead>
                     <tbody>
                         {% for bestPlayer in bestPlayers|slice(0, 10) %}
                             <tr>
