@@ -6,6 +6,7 @@ use App\Entity\Game;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
+use phpDocumentor\Reflection\PseudoTypes\LowercaseString;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 class GameFixture extends Fixture implements DependentFixtureInterface
@@ -66,6 +67,12 @@ class GameFixture extends Fixture implements DependentFixtureInterface
             il n'existe pas de version standard. 
             Son concept simple l'a amené à être porté sur l'ensemble des plates-formes 
             de jeu existantes sous des noms de clone."
+        ],
+        [
+            "name" => "Planet Defense",
+            "category" => "Shoot'em up",
+            "description" => "Jeu de tir spatial, le vaisseau doit défendre la planète contre
+            les astéroïdes."
         ]
     ];
 
@@ -80,7 +87,7 @@ class GameFixture extends Fixture implements DependentFixtureInterface
             $game = new Game();
             $game->setName($gameValue["name"]);
             $slug = $this->slugger->slug($gameValue["name"]);
-            $game->setSlug($slug);
+            $game->setSlug(strtolower($slug));
             $game->setDescription($gameValue["description"]);
             $game->setIsAvailable(true);
             $game->setCategory($this->getReference("category_" . $gameValue['category']));

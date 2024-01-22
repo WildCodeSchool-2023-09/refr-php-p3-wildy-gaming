@@ -6,6 +6,7 @@ use App\Entity\Game;
 use App\Entity\Play;
 use App\Repository\GameRepository;
 use App\Repository\PlayRepository;
+use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -38,9 +39,22 @@ class GamesController extends AbstractController
     #[Route('/{gameSlug}', methods:['GET'], name:'show')]
     public function showGame(
         #[MapEntity(mapping: ['gameSlug' => 'slug'])] Game $game,
+        PlayRepository $playRepository,
     ): Response {
+
+        $plays = $playRepository->findBy(["game" => $game->getId()], ["score" => "DESC"]);
+        $bestUsers = [];
+
+        foreach ($plays as $play) {
+            if (!in_array($play->getUser()->getUsername(), $bestUsers) && (count($bestUsers) < 3)) {
+                $bestUsers[] = $play->getUser()->getUsername();
+            }
+        }
+
         return $this->render('games/show.html.twig', [
-            'game' => $game
+            'game' => $game,
+            "bestUsers" => $bestUsers,
+            "plays" => $plays
         ]);
     }
 
@@ -59,6 +73,7 @@ class GamesController extends AbstractController
         $play->setGame($game);
         $play->setUser($this->getUser());
         $play->setScore($score);
+        $play->setDate(new DateTime());
 
         $entityManager->persist($play);
         $entityManager->flush();

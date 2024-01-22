@@ -49,7 +49,7 @@ function game() {
 
     function update() {
         cH = ctx.canvas.height = 800;
-        cW = ctx.canvas.width  = 1000 ;
+        cW = ctx.canvas.width  = containerWidth ;
     }
 
     function move(e) {
