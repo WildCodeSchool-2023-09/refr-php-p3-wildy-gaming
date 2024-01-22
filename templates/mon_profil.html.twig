@@ -32,5 +32,71 @@
                 <input type="hidden" name="_token" value="{{csrf_token(app.user.id)}}"><button type="submit"  > supprimer le compte</button>
               </div>
        </form> 
-         
+        <section class="game-fav">
+       <div>
+            <a href="">
+                <article class="card-game cadreblue hover-cadre-neon">
+                    <div class="card-game favorite">
+                            <img src="{{ asset('build/images/tetris.png') }}" alt="tetris">                           
+                        </div>
+                        <div class="card-game-favorite-description">
+                            <h2>nom du jeu</h2> 
+                            <h3>Catégorie : category</h3>
+                            <h3>Description :</h3>
+                            <p>texte</p>
+                        </div>
+                         
+                        <div >
+                            <img src="{{ asset('build/images/tetris.png') }}" alt="tetris">
+                                                  
+                        </div>
+                        <div>
+                            <h2>nom du jeu</h2> 
+                            <h3>Catégorie : category</h3>
+                            <h3>Description :</h3>
+                            <p>texte</p>
+                        </div>
+                         <div>
+                        <div >
+                            <img src="{{ asset('build/images/tetris.png') }}" alt="tetris">                      
+                        </div>
+                        <div class="card-game-favorite-description3">
+                            <h2>nom du jeu</h2> 
+                            <h3>Catégorie : category</h3>
+                            <h3>Description :</h3>
+                            <p>texte</p>
+                        </div> 
+                    </div>
+                    <div class="cards-lots-acquis">
+                     <div>
+            <a href="">
+                    <div class="card-game favorite">
+                            <img src="{{ asset('build\images\teddy-bear.8bbf3f2e.jpg') }}" alt="lots acquis">                      
+                        </div>
+                        <div class="card-lots_acquis-description">
+                            <h2>nom du lots</h2> 
+                            <h3>Description :</h3>
+                            <p>texte</p>
+                        </div>
+                            <div>
+           
+                    <div class="card-game favorite">
+                            <img src="{{ asset('build\images\teddy-bear.8bbf3f2e.jpg') }}" alt="lots acquis">                           
+                        </div>
+                        <div class="card-lots_acquis-description">
+                            <h2>nom du lots</h2> 
+                            <h3>Description :</h3>
+                            <p>texte</p>
+                        </div>
+                            <div>
+           
+                    <div class="card-game favorite">
+                            <img src="{{ asset('build\images\teddy-bear.8bbf3f2e.jpg') }}" alt="lots acquis">                           
+                        </div>
+                        <div class="card-lots_acquis-description">
+                            <h2>nom du lots</h2> 
+                            <h3>Description :</h3>
+                            <p>texte</p>
+                        </div>
+         </section>
         {% endblock %}
