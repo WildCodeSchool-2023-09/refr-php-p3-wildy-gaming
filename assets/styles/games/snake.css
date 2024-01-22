@@ -10,8 +10,16 @@ canvas {
     padding-bottom: 2rem;
 }
 
+.container-snake {
+    position: relative;
+}
+
 /* boutons */
 .replay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: none;
     border-radius: 0.6rem;
     box-shadow: 0px 0px 10px 10px #13DCF2;
@@ -24,6 +32,14 @@ canvas {
     letter-spacing: 0.1rem;
     cursor: pointer;
     margin-top: 0;
+}
+
+.replay-visibility {
+    visibility: visible;
+}
+
+.replay-hidden {
+    visibility: hidden;
 }
 
 .replay:hover {

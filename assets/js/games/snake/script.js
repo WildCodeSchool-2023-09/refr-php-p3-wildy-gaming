@@ -1,5 +1,6 @@
 const canvas = document.querySelector('#snake')
 const scoreSpan = document.querySelector('.score')
+const buttonReload = document.querySelector('.replay')
 
 let score = 0
 
@@ -34,6 +35,7 @@ snake[0] = {
 let d
 document.addEventListener('keydown', (e) => {
     let key = e.keyCode;
+    e.preventDefault();
     if (key == 37 && d != "R") {
         d = "L"
     } else if (key == 38 && d != "D") {
@@ -87,16 +89,16 @@ function draw()
     }
 
     if (d == "L") {
-      snakeX -= unit
+        snakeX -= unit
     }
     if (d == "U") {
-      snakeY -= unit
+        snakeY -= unit
     }
     if (d == "R") {
-      snakeX += unit
+        snakeX += unit
     }
     if (d == "D") {
-      snakeY += unit
+        snakeY += unit
     }
 
     let newHead = {
@@ -110,6 +112,8 @@ function draw()
       snakeY >= canvas.height ||
       collisionBody(newHead,snake)) {
         clearInterval(play)
+        buttonReload.classList.remove('replay-hidden')
+        buttonReload.classList.add('replay-visible')
         /*deadAudio.play()*/
     }
     snake.unshift(newHead)
@@ -117,4 +121,8 @@ function draw()
 
 }
 
+
+buttonReload.addEventListener('click', function () {
+    window.location.reload()
+})
 let play = setInterval(draw,100)
