@@ -7,13 +7,14 @@
 
 .contact {
     display: flex;
- justify-content: space-between;
+ justify-content: space-around;
   margin: 5rem 0;
+  margin-left: 260px;
 }
 
 .center {
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 }
 
 .contacte {
