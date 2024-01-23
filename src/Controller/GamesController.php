@@ -80,7 +80,8 @@ class GamesController extends AbstractController
 
 
         return new JsonResponse(['success' => true, "score" => $score, "name_game" => $nameGame, "game" => $game]);
-      
+    }
+
     #[Route('/snake', name: 'games_show', methods: ['GET'])]
     public function show(GameRepository $gameRepository): Response
     {
