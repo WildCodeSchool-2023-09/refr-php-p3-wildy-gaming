@@ -1,10 +1,8 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Username{% endblock %}
-
 {% block body %}
-<h1> Mon profil</h1>
- <div class="username">
+                <h1> Mon profil</h1>
+    <div class="username">
            {{ form_start(form) }}
            {{ form_errors(form) }}
     <div class="monprofilfirstname">    
@@ -30,12 +28,13 @@
       <form method="POST" action="{{ path('user_delete', {id:app.user.id})}}"> 
       <div class="buttondelete">
                 <input type="hidden" name="_token" value="{{csrf_token(app.user.id)}}"><button type="submit"  > supprimer le compte</button>
-              </div>
-       </form> 
-        <section class="game-fav">
-       <div>
+      </div>
+      </form> 
+                      <section class="fav cadreblue hover-cadre-neon">
+                      <section class="fav-game1">
+            <div>
             <a href="">
-                <article class="card-game cadreblue hover-cadre-neon">
+                <article class="card-game ">
                     <div class="card-game favorite">
                             <img src="{{ asset('build/images/tetris.png') }}" alt="tetris">                           
                         </div>
@@ -45,10 +44,8 @@
                             <h3>Description :</h3>
                             <p>texte</p>
                         </div>
-                         
                         <div >
-                            <img src="{{ asset('build/images/tetris.png') }}" alt="tetris">
-                                                  
+                            <img src="{{ asset('build/images/tetris.png') }}" alt="tetris">                    
                         </div>
                         <div>
                             <h2>nom du jeu</h2> 
@@ -56,47 +53,46 @@
                             <h3>Description :</h3>
                             <p>texte</p>
                         </div>
-                         <div>
+                        <div>
                         <div >
                             <img src="{{ asset('build/images/tetris.png') }}" alt="tetris">                      
-                        </div>
-                        <div class="card-game-favorite-description3">
+                        </div class="card-game-favorite-description3">
                             <h2>nom du jeu</h2> 
                             <h3>Catégorie : category</h3>
                             <h3>Description :</h3>
                             <p>texte</p>
                         </div> 
-                    </div>
-                    <div class="cards-lots-acquis">
-                     <div>
-            <a href="">
-                    <div class="card-game favorite">
-                            <img src="{{ asset('build\images\teddy-bear.8bbf3f2e.jpg') }}" alt="lots acquis">                      
                         </div>
-                        <div class="card-lots_acquis-description">
-                            <h2>nom du lots</h2> 
-                            <h3>Description :</h3>
-                            <p>texte</p>
                         </div>
-                            <div>
-           
-                    <div class="card-game favorite">
-                            <img src="{{ asset('build\images\teddy-bear.8bbf3f2e.jpg') }}" alt="lots acquis">                           
-                        </div>
-                        <div class="card-lots_acquis-description">
-                            <h2>nom du lots</h2> 
-                            <h3>Description :</h3>
-                            <p>texte</p>
-                        </div>
-                            <div>
-           
-                    <div class="card-game favorite">
-                            <img src="{{ asset('build\images\teddy-bear.8bbf3f2e.jpg') }}" alt="lots acquis">                           
-                        </div>
-                        <div class="card-lots_acquis-description">
-                            <h2>nom du lots</h2> 
-                            <h3>Description :</h3>
-                            <p>texte</p>
-                        </div>
-         </section>
-        {% endblock %}
+                        </section>
+                                            <section class="fav-lot2">
+                                              <div class="cards-lots-acquis">
+                                              <div>
+                                              <a href="">
+                                             <div class="card-game favorite">
+                                                      <img src="{{ asset('build/images/tetris.png') }}" alt="lots acquis">                      
+                                             </div>
+                                             <div class="card-lots_acquis-description">
+                                                     <h2>nom du lots</h2> 
+                                                     <h3>Description :</h3>
+                                                     <p>texte</p>
+                                             </div>
+                                             <div>
+                                                      <img src="{{ asset('build/images/tetris.png') }}" alt="lots acquis">                           
+                                             </div>
+                                             <div class="card-lots_acquis-description">
+                                                     <h2>nom du lots</h2> 
+                                                     <h3>Description :</h3>
+                                                     <p>texte</p>
+                                             </div>
+                                             <div>
+                                                      <img src="{{ asset('build/images/tetris.png') }}" alt="lots acquis">                           
+                                             </div>
+                                             <div class="card-lots_acquis-description">
+                                                     <h2>nom du lots</h2> 
+                                                     <h3>Description :</h3>
+                                                     <p>texte</p>
+                                             </div>
+                                            </section>                       
+                        </section>
+{% endblock %}                  

@@ -81,8 +81,30 @@ button:hover {
     margin-bottom: 5rem;
 }
 
-.game-fav {
+.fav {
+margin-top: 5rem;
+   
+}
+.fav-game1 {
+    display:flex;
+    grid-template-rows: 2fr 2fr 2fr ;
+    justify-content: space-between;
+}
+
+.fav-lot2 {
     display: grid;
-flex-direction: row ; 
-margin-top: 5rem;   
+    justify-content: space-between;
+    grid-template-rows: 2fr 2fr 2fr ;
+}
+
+.card-game{
+    display: flex;
+    justify-content: space-between;
+    grid-template-rows: 2fr 2fr 2fr ;
+}
+
+.cards-lots-acquis {
+    display: grid;
+    justify-content:space-between;
+    grid-template-rows:2fr 2fr 2fr  ;
 }
