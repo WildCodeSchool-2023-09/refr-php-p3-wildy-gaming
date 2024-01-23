@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Snake{% endblock %}
+
+{% block body %}
+    <h1>Snake</h1>
+    <div id="snakegame">
+        <h2 class="h2-snake">Score : <span class="score">0</span></h2>
+        <div class="container-snake">
+            <canvas id="snake" width="600" height="600"></canvas>
+            <button class="replay replay-hidden">Rejouer</button>
+        </div>
+    </div>
+{% endblock %}
