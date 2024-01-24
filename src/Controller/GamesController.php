@@ -36,7 +36,20 @@ class GamesController extends AbstractController
         ]);
     }
 
-    #[Route("/saveScore")]
+    #[Route('/{gameSlug}', methods:['GET'], name:'show')]
+    public function showGame(
+        #[MapEntity(mapping: ['gameSlug' => 'slug'])] Game $game,
+        PlayRepository $playRepository,
+    ): Response {
+
+        $plays = $playRepository->findBy(["game" => $game->getId()], ["score" => "DESC"]);
+
+        return $this->render('games/show.html.twig', [
+            'game' => $game,
+            "plays" => $plays
+        ]);
+    }
+
     public function saveScore(
         Request $request,
         EntityManagerInterface $entityManager,
@@ -57,29 +70,6 @@ class GamesController extends AbstractController
         $entityManager->persist($play);
         $entityManager->flush();
 
-
         return new JsonResponse(['success' => true, "score" => $score, "name_game" => $nameGame, "game" => $game]);
-    }
-
-    #[Route('/{gameSlug}', methods:['GET'], name:'show')]
-    public function showGame(
-        #[MapEntity(mapping: ['gameSlug' => 'slug'])] Game $game,
-        PlayRepository $playRepository,
-    ): Response {
-
-        $plays = $playRepository->findBy(["game" => $game->getId()], ["score" => "DESC"]);
-        $bestUsers = [];
-
-        foreach ($plays as $play) {
-            if (!in_array($play->getUser()->getUsername(), $bestUsers) && (count($bestUsers) < 3)) {
-                $bestUsers[] = $play->getUser()->getUsername();
-            }
-        }
-
-        return $this->render('games/show.html.twig', [
-            'game' => $game,
-            "bestUsers" => $bestUsers,
-            "plays" => $plays
-        ]);
     }
 }
