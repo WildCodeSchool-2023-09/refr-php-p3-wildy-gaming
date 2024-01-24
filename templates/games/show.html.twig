@@ -1,7 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block title %}Planet Defense{% endblock %}
-
+{% block title %} {{ game.name }} {% endblock %}
 
 {% block body %}
 
@@ -24,7 +23,7 @@
                 <table class="score-player">
                     <thead>
                         <tr>
-                            <th><h3>Rang</h3</th>
+                            <th><h3>Rang</h3></th>
                             <th><h3>Pseudo</h3></th>
                             <th><h3>Score</h3></th>
                         </tr>
