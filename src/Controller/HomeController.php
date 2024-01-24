@@ -13,7 +13,6 @@ class HomeController extends AbstractController
     public function index(UserRepository $userRepository): Response
     {
         $threeBestPlayer = $userRepository->bestThreePlayers();
-        dump($threeBestPlayer);
         return $this->render('home/index.html.twig', ["bestPlayers" => $threeBestPlayer]);
     }
 }
