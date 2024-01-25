@@ -25,7 +25,7 @@
        </div>
            {{ form_end(form) }}
       </div>
-      <form method="POST" action="{{ path('user_delete', {id:app.user.id})}}"> 
+      <form method="POST" action="{{ path('user_delete', {idUser: app.user.id})}}"> 
       <div class="buttondelete">
                 <input type="hidden" name="_token" value="{{csrf_token(app.user.id)}}"><button type="submit"  > supprimer le compte</button>
       </div>
