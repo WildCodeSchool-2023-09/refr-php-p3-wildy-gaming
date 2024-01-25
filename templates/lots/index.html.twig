@@ -17,7 +17,7 @@
 
         {% for slice,limit in sliceScore %}
         <a href="#" role="button" data-target="#modal{{ loop.index }}" data-toggle="modal">
-            <article class="cadreblue article-lots">
+            <article class="cadreblue article-lots hover-cadre-neon">
                     <div class="palier">
                         {% for lot in lots %}
                             {% if lot.price >= limit.min and lot.price <= limit.max %}
