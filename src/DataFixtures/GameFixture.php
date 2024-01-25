@@ -44,7 +44,7 @@ class GameFixture extends Fixture implements DependentFixtureInterface
             société The Tetris Company."
         ],
         [
-            "name" => "Pacman",
+            "name" => "Pac-man",
             "category" => "Arcade",
             "description" => "Pac-Man (パックマン, Pakkuman?) est une série de jeux vidéo créée par Tōru Iwatani et 
             éditée par Namco. Elle a débuté en 1980 avec le jeu éponyme."
