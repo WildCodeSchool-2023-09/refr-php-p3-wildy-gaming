@@ -13,6 +13,23 @@ class GameFixture extends Fixture implements DependentFixtureInterface
 {
     public const GAMES = [
         [
+            "name" => "Snake",
+            "category" => "Arcade",
+            "description" => "Le snake, de l'anglais signifiant « serpent », 
+            est un genre de jeu vidéo dans lequel le joueur 
+            dirige un serpent qui grandit et constitue ainsi lui-même un obstacle. 
+            Bien que le concept tire son origine du jeu vidéo d'arcade Blockade, 
+            il n'existe pas de version standard. 
+            Son concept simple l'a amené à être porté sur l'ensemble des plates-formes 
+            de jeu existantes sous des noms de clone."
+        ],
+        [
+            "name" => "Planet Defense",
+            "category" => "Shoot'em up",
+            "description" => "Jeu de tir spatial, le vaisseau doit défendre la planète contre
+            des astéroïdes."
+        ],
+        [
             "name" => "Tétris",
             "category" => "Puzzle",
             "description" => "Tetris est un jeu vidéo de puzzle conçu par l'ingénieur soviétique Alekseï Pajitnov 
@@ -57,23 +74,7 @@ class GameFixture extends Fixture implements DependentFixtureInterface
             Si les cartes ne sont pas identiques, 
             il les retourne faces cachées à leur emplacement de départ."
         ],
-        [
-            "name" => "Snake",
-            "category" => "Arcade",
-            "description" => "Le snake, de l'anglais signifiant « serpent », 
-            est un genre de jeu vidéo dans lequel le joueur 
-            dirige un serpent qui grandit et constitue ainsi lui-même un obstacle. 
-            Bien que le concept tire son origine du jeu vidéo d'arcade Blockade, 
-            il n'existe pas de version standard. 
-            Son concept simple l'a amené à être porté sur l'ensemble des plates-formes 
-            de jeu existantes sous des noms de clone."
-        ],
-        [
-            "name" => "Planet Defense",
-            "category" => "Shoot'em up",
-            "description" => "Jeu de tir spatial, le vaisseau doit défendre la planète contre
-            les astéroïdes."
-        ]
+
     ];
 
     public function __construct(private SluggerInterface $slugger)

@@ -1,7 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block title %}Planet Defense{% endblock %}
-
+{% block title %} {{ game.name }} {% endblock %}
 
 {% block body %}
 
@@ -24,7 +23,7 @@
                 <table class="score-player">
                     <thead>
                         <tr>
-                            <th><h3>Rang</h3</th>
+                            <th><h3>Rang</h3></th>
                             <th><h3>Pseudo</h3></th>
                             <th><h3>Score</h3></th>
                         </tr>
@@ -53,15 +52,15 @@
                 </table>
             </div>
             <div class="game-podium">
-                {% if bestUsers is not empty %}
+                {% if plays is not empty %}
                     <div class="game-podium-name">
-                            {% for key, bestUser in bestUsers %}
+                            {% for key, bestUser in plays|slice(0, 3) %}
                                 {% if key == 0 %}
-                                    <h3 class="first-place">{{ bestUser }}</h3>
+                                    <h3 class="first-place">{{ bestUser.user.username }}</h3>
                                 {% elseif key == 1 %}
-                                    <h4 class="second-place">{{ bestUser }}</h4>
+                                    <h4 class="second-place">{{ bestUser.user.username }}</h4>
                                 {% elseif key == 2 %}
-                                    <h4 class="third-place">{{ bestUser }}</h4>
+                                    <h4 class="third-place">{{ bestUser.user.username }}</h4>
                                 {% endif %}
                             {% endfor %}
                     </div>
