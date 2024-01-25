@@ -43,17 +43,9 @@ class GamesController extends AbstractController
     ): Response {
 
         $plays = $playRepository->findBy(["game" => $game->getId()], ["score" => "DESC"]);
-        $bestUsers = [];
-
-        foreach ($plays as $play) {
-            if (!in_array($play->getUser()->getUsername(), $bestUsers) && (count($bestUsers) < 3)) {
-                $bestUsers[] = $play->getUser()->getUsername();
-            }
-        }
 
         return $this->render('games/show.html.twig', [
             'game' => $game,
-            "bestUsers" => $bestUsers,
             "plays" => $plays
         ]);
     }
@@ -78,16 +70,6 @@ class GamesController extends AbstractController
         $entityManager->persist($play);
         $entityManager->flush();
 
-
         return new JsonResponse(['success' => true, "score" => $score, "name_game" => $nameGame, "game" => $game]);
-    }
-
-    #[Route('/snake', name: 'games_show', methods: ['GET'])]
-    public function show(GameRepository $gameRepository): Response
-    {
-        $games = $gameRepository->findAll();
-
-        return $this->render('games/snake.html.twig', [
-            'games' => $games,]);
     }
 }

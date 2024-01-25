@@ -16,10 +16,6 @@
     margin-bottom: 1.5rem;
 }
 
-.play-game {
-    /* box-shadow: 0px 0px 25px 10px rgba(19,220,242,0.82), inset 0px 0px 25px 5px rgba(19,220,242,0.82); */
-    box-shadow: 0px 0px 25px 10px rgba(123, 23, 166, 0.82), inset 0px 0px 25px 5px rgba(123, 23, 166, 0.82);
-}
 
 .container-game-description {
     width: 30%;

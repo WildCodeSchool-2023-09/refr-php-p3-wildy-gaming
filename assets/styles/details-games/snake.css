@@ -1,4 +1,4 @@
-canvas {
+.snake {
     display: flex;
     border: 3px solid #7B17A6;
     margin: 0 auto;

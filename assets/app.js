@@ -12,9 +12,10 @@ import './styles/app.scss';
 import './bootstrap';
 
 import './js/home/script';
-
 import './js/lots/script';
+
+import './js/games/selectGame'
 import './js/games/scriptAjaxScore';
-import './js/games/planet_defense/planet_defense';
-import './js/games/snake/script';
+
+
 
