@@ -18,9 +18,3 @@ import './js/games/selectGame'
 import './js/games/scriptAjaxScore';
 
 
-
-
-
-import './js/game/pacman';
-
-import'./js/game/modernizr-1.5.min';
