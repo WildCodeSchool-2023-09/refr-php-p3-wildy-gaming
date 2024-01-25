@@ -32,7 +32,7 @@
                         {% for play in plays|slice(0, 10) %}
                             <tr>
                                 <td>
-                                    <p>
+                                    <p class="{% if play.user == app.user %} user-connected-score {% endif %}">
                                         {% if loop.index == 1 %}
                                             {{ loop.index }}ST
                                         {% elseif loop.index == 2 %}
@@ -45,7 +45,7 @@
                                     </p>
                                 </td>
                                 <td><p class="{% if play.user == app.user %} user-connected-score {% endif %}">{{ play.user.username }}</p></td>
-                                <td><p>{{ play.score }}</p></td>
+                                <td><p class="{% if play.user == app.user %} user-connected-score {% endif %}">{{ play.score }}</p></td>
                             </tr>                            
                         {% endfor %}
                     </tbody>

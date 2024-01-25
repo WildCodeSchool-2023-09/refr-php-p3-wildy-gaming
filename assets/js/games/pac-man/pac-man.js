@@ -1,3 +1,5 @@
+import { saveScore } from '../scriptAjaxScore';
+
 var NONE        = 4,
     UP          = 3,
     LEFT        = 2,
@@ -731,12 +733,12 @@ Pacman.Audio = function(game) {
     }
 
     function play(name) { 
-        if (!game.soundDisabled()) {
-            endEvents[name] = function() { ended(name); };
-            playing.push(name);
-            files[name].addEventListener("ended", endEvents[name], true);
-            files[name].play();
-        }
+        // if (!game.soundDisabled()) {
+        //     endEvents[name] = function() { ended(name); };
+        //     playing.push(name);
+        //     // files[name].addEventListener("ended", endEvents[name], true);
+        //     files[name].play();
+        // }
     }
 
     function pause() { 
@@ -849,6 +851,8 @@ var PACMAN = (function () {
         user.loseLife();
         if (user.getLives() > 0) {
             startLevel();
+        } else {
+            saveScore(user.theScore(), "pac-man")
         }
     }
 
@@ -1047,16 +1051,16 @@ var PACMAN = (function () {
 
         // var extension = Modernizr.audio.ogg ? 'ogg' : 'mp3';
 
-        //     var audio_files = [
-        //         ["start", root + "audio/opening_song." + extension],
-        //         ["die", root + "audio/die." + extension],
-        //         ["eatghost", root + "audio/eatghost." + extension],
-        //         ["eatpill", root + "audio/eatpill." + extension],
-        //         ["eating", root + "audio/eating.short." + extension],
-        //         ["eating2", root + "audio/eating.short." + extension]
-        //     ];
-
-    //     load(audio_files, function() { loaded(); });
+        // var audio_files = [
+        //     ["start", root + "audio/opening_song." + extension],
+        //     ["die", root + "audio/die." + extension],
+        //     ["eatghost", root + "audio/eatghost." + extension],
+        //     ["eatpill", root + "audio/eatpill." + extension],
+        //     ["eating", root + "audio/eating.short." + extension],
+        //     ["eating2", root + "audio/eating.short." + extension]
+        // ];
+        loaded();
+        // load(audio_files, function() { loaded(); });
     }
 
     function load(arr, callback) { 
