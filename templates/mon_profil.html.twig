@@ -1,26 +1,24 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Username{% endblock %}
-
 {% block body %}
-<h1> Mon profil</h1>
- <div class="username">
+                <h1> Mon profil</h1>
+    <div class="username">
            {{ form_start(form) }}
            {{ form_errors(form) }}
     <div class="monprofilfirstname">    
-           {{ form_row(form.firstname, {'label':false,'attr': {'placeholder': 'PRENOM'}})}}
+           {{ form_row(form.firstname, {'label':false,'attr': {'placeholder': 'PRENOM', "class":"form-prenom"}})}}
     </div>
     <div class="monprofillastname">  
-           {{ form_row(form.lastname, {'label':false,'attr': {'placeholder': 'NOM'}}) }}
+           {{ form_row(form.lastname, {'label':false,'attr': {'placeholder': 'NOM', "class":"form-nom"}}) }}
      </div>
      <div class="monprofilbirthdate">  
-           {{ form_row(form.birthdate, {'label':false,'attr': {'placeholder': 'BIRTHDATE'}})}}
+           {{ form_row(form.birthdate, {'label':false,'attr': {'placeholder': 'BIRTHDATE',"class":"form-birthdate"}})}}
       </div>
       <div class="monprofilusername">
-           {{ form_row(form.username, {'label':false,'attr': {'placeholder': 'PSEUDO'}})}}
+           {{ form_row(form.username, {'label':false,'attr': {'placeholder': 'PSEUDO',"class":"form-pseudo"}})}}
       </div> 
       <div class="monprofilemail">
-           {{ form_row(form.email, {'label':false,'attr': {'placeholder': 'EMAIL'}}) }}
+           {{ form_row(form.email, {'label':false,'attr': {'placeholder': 'EMAIL',"class":"form-Email"}}) }}
       </div>
       <div class="monprofiltype">
                  <button type="submit" class="btn">Valider</button>
@@ -30,6 +28,71 @@
       <form method="POST" action="{{ path('user_delete', {id:app.user.id})}}"> 
       <div class="buttondelete">
                 <input type="hidden" name="_token" value="{{csrf_token(app.user.id)}}"><button type="submit"  > supprimer le compte</button>
-              </div>
-       </form>   
-        {% endblock %}
+      </div>
+      </form> 
+                      <section class="fav cadreblue hover-cadre-neon">
+                      <section class="fav-game1">
+            <div>
+            <a href="">
+                <article class="card-game ">
+                    <div class="card-game favorite">
+                            <img src="{{ asset('build/images/tetris.png') }}" alt="tetris">                           
+                        </div>
+                        <div class="card-game-favorite-description">
+                            <h2>nom du jeu</h2> 
+                            <h3>Catégorie : category</h3>
+                            <h3>Description :</h3>
+                            <p>texte</p>
+                        </div>
+                        <div >
+                            <img src="{{ asset('build/images/tetris.png') }}" alt="tetris">                    
+                        </div>
+                        <div>
+                            <h2>nom du jeu</h2> 
+                            <h3>Catégorie : category</h3>
+                            <h3>Description :</h3>
+                            <p>texte</p>
+                        </div>
+                        <div>
+                        <div >
+                            <img src="{{ asset('build/images/tetris.png') }}" alt="tetris">                      
+                        </div class="card-game-favorite-description3">
+                            <h2>nom du jeu</h2> 
+                            <h3>Catégorie : category</h3>
+                            <h3>Description :</h3>
+                            <p>texte</p>
+                        </div> 
+                        </div>
+                        </div>
+                        </section>
+                                            <section class="fav-lot2">
+                                              <div class="cards-lots-acquis">
+                                              <div>
+                                              <a href="">
+                                             <div class="card-game favorite">
+                                                      <img src="{{ asset('build/images/tetris.png') }}" alt="lots acquis">                      
+                                             </div>
+                                             <div class="card-lots_acquis-description">
+                                                     <h2>nom du lots</h2> 
+                                                     <h3>Description :</h3>
+                                                     <p>texte</p>
+                                             </div>
+                                             <div>
+                                                      <img src="{{ asset('build/images/tetris.png') }}" alt="lots acquis">                           
+                                             </div>
+                                             <div class="card-lots_acquis-description">
+                                                     <h2>nom du lots</h2> 
+                                                     <h3>Description :</h3>
+                                                     <p>texte</p>
+                                             </div>
+                                             <div>
+                                                      <img src="{{ asset('build/images/tetris.png') }}" alt="lots acquis">                           
+                                             </div>
+                                             <div class="card-lots_acquis-description">
+                                                     <h2>nom du lots</h2> 
+                                                     <h3>Description :</h3>
+                                                     <p>texte</p>
+                                             </div>
+                                            </section>                       
+                        </section>
+{% endblock %}                  

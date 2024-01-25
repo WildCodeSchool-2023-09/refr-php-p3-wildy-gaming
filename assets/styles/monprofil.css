@@ -1,33 +1,51 @@
 .username {
 display: flex;
-  justify-content: center;
+justify-content: center;
 }
 
 .monprofilfirstname {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
 }
 
 .monprofillastname {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
 }
 
 .monprofilbirthdate {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
 }
 
 .monprofilusername {
-    margin-bottom: 1rem;  
+    margin-bottom: 2rem; 
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px; 
 }
 
 .monprofiltype {
     display: flex;
     justify-content: center;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
    
 }
 
 .buttondelete {
     display: flex;
     justify-content: center;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
 }
 
 input, select, textarea {     
@@ -60,4 +78,33 @@ button:hover {
     justify-content: center;     
     margin: auto;     
     margin-top: 5rem; 
+    margin-bottom: 5rem;
+}
+
+.fav {
+margin-top: 5rem;
+   
+}
+.fav-game1 {
+    display:flex;
+    grid-template-rows: 2fr 2fr 2fr ;
+    justify-content: space-between;
+}
+
+.fav-lot2 {
+    display: grid;
+    justify-content: space-between;
+    grid-template-rows: 2fr 2fr 2fr ;
+}
+
+.card-game{
+    display: flex;
+    justify-content: space-between;
+    grid-template-rows: 2fr 2fr 2fr ;
+}
+
+.cards-lots-acquis {
+    display: grid;
+    justify-content:space-between;
+    grid-template-rows:2fr 2fr 2fr  ;
 }
