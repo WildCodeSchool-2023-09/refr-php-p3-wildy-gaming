@@ -1030,8 +1030,6 @@ var PACMAN = (function () {
         canvas.setAttribute("width", (blockSize * 19) + "px");
         canvas.setAttribute("height", (blockSize * 22) + 30 + "px");
 
-        // wrapper.appendChild(canvas);
-
         ctx  = canvas.getContext('2d');
 
         audio = new Pacman.Audio({"soundDisabled":soundDisabled});
@@ -1048,19 +1046,8 @@ var PACMAN = (function () {
         
         map.draw(ctx);
         dialog("Loading ...");
-
-        // var extension = Modernizr.audio.ogg ? 'ogg' : 'mp3';
-
-        // var audio_files = [
-        //     ["start", root + "audio/opening_song." + extension],
-        //     ["die", root + "audio/die." + extension],
-        //     ["eatghost", root + "audio/eatghost." + extension],
-        //     ["eatpill", root + "audio/eatpill." + extension],
-        //     ["eating", root + "audio/eating.short." + extension],
-        //     ["eating2", root + "audio/eating.short." + extension]
-        // ];
         loaded();
-        // load(audio_files, function() { loaded(); });
+        
     }
 
     function load(arr, callback) { 
@@ -1267,11 +1254,3 @@ Object.prototype.clone = function () {
 
 var el = document.getElementById("pac-man");
 PACMAN.init(el, "https://raw.githubusercontent.com/daleharvey/pacman/master/");
-// if (Modernizr.canvas && Modernizr.localstorage && 
-//     Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
-//     window.setTimeout(function () { PACMAN.init(el, "https://raw.githubusercontent.com/daleharvey/pacman/master/"); }, 0);
-// } else { 
-//     el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
-//     "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
-// }
-
