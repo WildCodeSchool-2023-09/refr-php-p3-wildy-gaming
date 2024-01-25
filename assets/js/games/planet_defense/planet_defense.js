@@ -222,22 +222,22 @@ function game() {
             coordsY;
 
         switch(type){
-            case 1:
+        case 1:
             coordsX = random(0, cW);
-                coordsY = 0 - 150;
-                break;
-            case 2:
-                coordsX = cW + 150;
-                coordsY = random(0, cH);
-                break;
-            case 3:
-                coordsX = random(0, cW);
-                coordsY = cH + 150;
-                break;
-            case 4:
-                coordsX = 0 - 150;
-                coordsY = random(0, cH);
-                break;
+            coordsY = 0 - 150;
+            break;
+        case 2:
+            coordsX = cW + 150;
+            coordsY = random(0, cH);
+            break;
+        case 3:
+            coordsX = random(0, cW);
+            coordsY = cH + 150;
+            break;
+        case 4:
+            coordsX = 0 - 150;
+            coordsY = random(0, cH);
+            break;
         }
 
         var asteroid = {

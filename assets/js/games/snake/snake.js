@@ -1,10 +1,31 @@
+import { saveScore } from '../scriptAjaxScore';
+
+const containerGame = document.querySelector('.play-game')
+
 const canvas = document.querySelector('#snake')
-const scoreSpan = document.querySelector('.score')
-const buttonReload = document.querySelector('.replay')
+
+canvas.setAttribute('width', 600)
+canvas.setAttribute('height', 600)
 
 let score = 0
+const scoreSpan = document.createElement('span')
+scoreSpan.textContent = score
+const titleScore = document.createElement("h2")
+titleScore.innerHTML = "Score : "
+titleScore.append(scoreSpan)
+titleScore.classList.add("h2-snake")
+
+containerGame.insertBefore(titleScore, canvas)
+containerGame.classList.add("container-snake")
+
+const buttonReload = document.createElement("button")
+buttonReload.innerHTML = "Reload"
+buttonReload.classList.add("replay")
+buttonReload.classList.add("replay-hidden")
+containerGame.appendChild(buttonReload)
 
 const context = canvas.getContext("2d")
+
 
 const background = new Image()
 background.src = require('../../../images/snake/background.png')
@@ -107,11 +128,12 @@ function draw()
     }
     //les collisions
     if (snakeX <= -unit ||
-      snakeX >= canvas.width ||
-      snakeY <= -unit ||
-      snakeY >= canvas.height ||
-      collisionBody(newHead,snake)) {
+    snakeX >= canvas.width ||
+    snakeY <= -unit ||
+    snakeY >= canvas.height ||
+    collisionBody(newHead,snake)) {
         clearInterval(play)
+        saveScore(score, "snake")
         buttonReload.classList.remove('replay-hidden')
         buttonReload.classList.add('replay-visible')
         /*deadAudio.play()*/
