@@ -3,32 +3,8 @@ display: flex;
 justify-content: center;
 }
 
-.monprofilfirstname {
+.monprofil {
     margin-bottom: 2rem;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    border-radius: 13px;
-}
-
-.monprofillastname {
-    margin-bottom: 2rem;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    border-radius: 13px;
-}
-
-.monprofilbirthdate {
-    margin-bottom: 2rem;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    border-radius: 13px;
-}
-
-.monprofilusername {
-    margin-bottom: 2rem; 
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    border-radius: 13px; 
 }
 
 .monprofiltype {
