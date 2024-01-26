@@ -7,6 +7,10 @@ if(document.body.contains(document.querySelector('canvas'))) {
     case "planet-defense":
         require('./planet_defense/planet_defense');
         break
+    
+    case "pac-man":
+        require('./pac-man/pac-man');
+        break
     }
 }
 
