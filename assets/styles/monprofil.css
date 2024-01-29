@@ -1,6 +1,6 @@
 .username {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .monprofil {
@@ -10,57 +10,19 @@ justify-content: center;
 .monprofiltype {
     display: flex;
     justify-content: center;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
     border-radius: 13px;
-   
 }
 
 .buttondelete {
     display: flex;
     justify-content: center;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
     border-radius: 13px;
 }
 
-input, select, textarea {     
-    color:rgba(123, 23, 166, 0.82);     
-    border-color: rgba(123, 23, 166, 0.82);
- }  
- 
- .inputneonpurple {    
-     box-shadow: 0px 0px 7px 2.5px rgba(123, 23, 166, 0.82);    
-      border: solid 3px rgba(123, 23, 166, 0.82);    
-       border-radius: 50px;
- }
-
- button {     
-    color: rgba(123, 23, 166, 0.82);     
-    width: 7rem;     
-    margin-top: 2rem;     
-    background-color: #061828;     
-    font-weight: bold; 
-}
-
-button:hover {     
-    background-color: rgba(123, 23, 166, 0.82);     
-    color:#061828; 
-}
-
-.redirectbutton button {     
-    display: flex;     
-    width: 20rem;     
-    justify-content: center;     
-    margin: auto;     
-    margin-top: 5rem; 
-    margin-bottom: 5rem;
-}
-
 .fav {
-margin-top: 5rem;
-   
+    margin-top: 5rem;
 }
+
 .fav-game1 {
     display:flex;
     grid-template-rows: 2fr 2fr 2fr ;
@@ -71,16 +33,4 @@ margin-top: 5rem;
     display: grid;
     justify-content: space-between;
     grid-template-rows: 2fr 2fr 2fr ;
-}
-
-.card-game{
-    display: flex;
-    justify-content: space-between;
-    grid-template-rows: 2fr 2fr 2fr ;
-}
-
-.cards-lots-acquis {
-    display: grid;
-    justify-content:space-between;
-    grid-template-rows:2fr 2fr 2fr  ;
 }
