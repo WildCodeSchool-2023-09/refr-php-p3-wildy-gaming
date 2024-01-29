@@ -43,13 +43,51 @@
         <h2 class="">Ce sont les meilleurs !</h2>
             <div class="podium">
                 <div class="podium-name">
-                    <h4 class="second-place">Steph_UwU</h4>
-                    <h3 class="first-place">xXxBaptisteLeBossxXx</h3>
-                    <h4 class="third-place">DarkSajid</h4>
+                    {% for key, bestPlayer in bestPlayers|slice(0, 3) %}
+                        {% if key == 0 %}
+                            <h3 class="first-place">{{ bestPlayer.username }}</h3>
+                        {% elseif key == 1 %}
+                            <h4 class="second-place">{{ bestPlayer.username }}</h4>
+                        {% elseif key == 2 %}
+                            <h4 class="third-place">{{ bestPlayer.username }}</h4>
+                        {% endif %}
+                    {% endfor %}
                 </div>
                 <div class="podium-image">
                     <img src="{{ asset('build/images/podium.png') }}">
                 </div>
+            </div>
+            <div class="home-score-best-players">
+                <table class="home-score-player">
+                    <thead>
+                        <tr>
+                            <th><h3>Rang</h3</th>
+                            <th><h3>Pseudo</h3></th>
+                            <th><h3>Score</h3></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for bestPlayer in bestPlayers|slice(0, 10) %}
+                            <tr>
+                                <td>
+                                    <p class="{% if app.user is not empty and bestPlayer.username == app.user.username %} user-connected-score {% endif %}">
+                                        {% if loop.index == 1 %}
+                                            {{ loop.index }}ST
+                                        {% elseif loop.index == 2 %}
+                                            {{ loop.index }}ND
+                                        {% elseif loop.index == 3 %}
+                                            {{ loop.index }}RD
+                                        {% else %}
+                                            {{ loop.index }}TH
+                                        {% endif %}
+                                    </p>
+                                </td>
+                                <td><p class="{% if app.user is not empty and bestPlayer.username == app.user.username  %} user-connected-score {% endif %}">{{ bestPlayer.username }}</p></td>
+                                <td><p class="{% if app.user is not empty and bestPlayer.username == app.user.username %} user-connected-score {% endif %}">{{ bestPlayer.totalScorePlayer }}</p></td>
+                            </tr>                            
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
     </section>
 {% endblock %}
