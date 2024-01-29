@@ -30,6 +30,7 @@ class ProfileUserType extends AbstractType
                 'label' => false
             ])
             ->add('birthdate', DateType::class, [
+                'attr' => ['class' => 'birthdate'],
                 'label' => false
             ])
 
