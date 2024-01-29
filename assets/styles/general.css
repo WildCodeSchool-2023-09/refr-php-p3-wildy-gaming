@@ -101,6 +101,11 @@ nav a{
     font-size: 2rem;
     align-self: center;
 }
+nav .container-link-profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /*FOOTER*/
 footer { 
