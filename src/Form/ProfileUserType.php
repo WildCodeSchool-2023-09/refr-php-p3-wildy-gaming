@@ -31,7 +31,8 @@ class ProfileUserType extends AbstractType
             ])
             ->add('birthdate', DateType::class, [
                 'attr' => ['class' => 'birthdate'],
-                'label' => false
+                'label' => false,
+                'years' => range(date('Y')-18, date('Y')-100),
             ])
 
             ->add('email', EmailType::class, [
