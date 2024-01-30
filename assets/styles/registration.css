@@ -1,5 +1,5 @@
 .inscription{
-padding-bottom: 5rem;
+  padding-bottom: 5rem;
 }
 
 button {   
@@ -9,128 +9,115 @@ button {
    background-color: #061828;     
    font-weight: bold; 
    box-shadow: 0px 0px 7px 2.5px rgba(123, 23, 166, 0.82); 
-  }
+}
 
 button:hover {  
    background-color: rgba(123, 23, 166, 0.82);
    color:#061828; 
-   }
+}
 
 .redirectbutton button {     
-    display: flex;     
-    width: 20rem;     
-    justify-content: center;     
-    margin: auto;     
-    margin-top: 5rem; 
+  display: flex;     
+  width: 20rem;     
+  justify-content: center;     
+  margin: auto;     
+  margin-top: 5rem; 
 }
 
 input, select, textarea {     
   color:rgba(123, 23, 166, 0.82);     
   border-color: rgba(123, 23, 166, 0.82);
- } 
+} 
  
-  .inputneonpurple {     
+.inputneonpurple {     
   box-shadow: 0px 0px 7px 2.5px rgba(123, 23, 166, 0.82);     
   border: solid 3px rgba(123, 23, 166, 0.82);     
   border-radius: 50px; 
-  }
+}
+
 .cadreblue {
   margin-right: 30rem;
   margin-left: 30rem;
   height: 35rem;
   margin-bottom: 15rem;
 }
-  .centre cadreblue {
- display: flex;
- justify-content: center;
-  }
 
-  .form-name {
-   display: flex;
-   flex-direction: row;
-   justify-content:space-around; 
-   height: 5rem;  
-   margin-top: 7rem;
-   } 
+.centre cadreblue {
+  display: flex;
+  justify-content: center;
+}
+
+.form-name {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around; 
+  height: 5rem;  
+  margin-top: 7rem;
+} 
   
   .form-firstname {
-   padding-right: 5rem;
-   -webkit-border-radius: 13px;
-   -moz-border-radius: 13px;
-   border-radius: 13px;
-   height: 2rem;
-   width: 10rem;
-  }
+  padding-right: 5rem;
+  border-radius: 13px;
+  height: 2rem;
+  width: 10rem;
+}
 
-  .form-lastname {
-   -webkit-border-radius: 13px;
-   -moz-border-radius: 13px;
-   border-radius: 13px; 
-   height: 2rem;
-   
-  }
+.form-lastname {
+  border-radius: 13px; 
+  height: 2rem; 
+}
 
-  .form-username {
-    padding-right: 6rem;
-   -webkit-border-radius: 13px;
-   -moz-border-radius: 13px;
-   border-radius: 13px;  
-   height: 2rem;
-    width: 10rem;
-  }
+.form-username {
+  padding-right: 6rem;
+  border-radius: 13px;  
+  height: 2rem;
+  width: 10rem;
+}
 
-  .form-password {
-   -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    border-radius: 13px; 
-    height: 2rem;  
-  }
+.form-password {
+  border-radius: 13px; 
+  height: 2rem;  
+}
 
-  .form-player {
-    display:flex;
-    flex:1;
-    justify-content:space-around; 
+.form-player {
+  display:flex;
+  flex:1;
+  justify-content:space-around; 
+}
 
-  }
+.form-birthdate {
+  display: flex;
+  justify-content: center;
+  border-radius: 13px;
+  height: 2rem; 
+}
 
-  .form-birthdate {
-    display: flex;
-    justify-content: center;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    border-radius: 13px;
-    height: 2rem; 
-    
-  }
+.form-email {
+  display: flex;
+  justify-content: center;
+  border-radius: 13px; 
+  height: 2rem;
+  margin-bottom: 3rem;
+}
 
-  .form-email {
-    display: flex;
-    justify-content: center;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    border-radius: 13px; 
-    height: 2rem;
-    margin-bottom: 3rem;
-  }
+.form-agree {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
 
-  .form-agree {
-    display: flex;
-    justify-content: center;
-    padding-top: 3rem;
-  }
+.form-button {
+  display:flex;
+  flex:1;
+  justify-content:space-around;
+}
 
-  .form-button {
-    display:flex;
-    flex:1;
-    justify-content:space-around;
-  }
-
-  .form-buttonvalide {
+.form-buttonvalide {
   height: 2rem;
   margin-right: 6rem;
-  }
+}
 
-  .formbuttondeja {
+.formbuttondeja {
   margin-left: 15rem;
   height: 2rem;
-  }
+}
