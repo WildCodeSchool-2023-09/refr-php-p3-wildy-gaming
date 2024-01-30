@@ -23,13 +23,6 @@
     <body>
       {% include "components/_navbar.html.twig" %}
       <main>
-      {% for category, messages in app.flashes %}
-    {% for message in messages %}
-        <div class="alert alert-{{ category }} mt-3">
-            {{ message }}
-        </div>
-    {% endfor %}
-{% endfor %}
           {% block body %} {% endblock %}
       </main>
       {% include "components/_footer.html.twig" %}
