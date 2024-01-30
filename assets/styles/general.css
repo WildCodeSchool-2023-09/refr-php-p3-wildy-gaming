@@ -9,6 +9,10 @@
     margin: 0;
 }
 
+:visited {
+    text-decoration: none;
+}
+
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
