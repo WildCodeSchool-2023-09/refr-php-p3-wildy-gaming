@@ -4,44 +4,39 @@
 
 {% block body %}
     <h1 class="inscription">Inscription</h1>
+
     <div class="centre cadreblue">   
         {{ form_start(registrationForm) }}
         {{ form_errors(registrationForm) }}
-    <div class="form-name">
-    <div class="form-firstname">
-        {{ form_row(registrationForm.firstname, {'label':false,'attr': {'placeholder': ' Prenom',"class":"form-firstname"}})}}
-    </div>
-    <div class="form-lastname">
-        {{ form_row(registrationForm.lastname, {'label':false,'attr': {'placeholder': '  Nom',"class":"form-lastname" }})}}
-    </div>
-    </div>
-    <div class="form-birthdate">
-        {{ form_row(registrationForm.birthdate, {'label':false,'attr': {'placeholder': '  Date de naissance',"class":"form-birthdate"}})}}
-    </div>
-    <div class="form-email">
-        {{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder':'  Email',"class":"form-email"}}) }}
-    </div>
-    <div class="form-player"> 
-    <div class="form-username">  
-        {{ form_row(registrationForm.username, {'label':false,'attr': {'placeholder': '  Pseudo',"class":"form-username"}})}}
-     </div>  
-     <div class="form-password">  
-        {{ form_row(registrationForm.plainPassword, {
-            'label': false,'attr': {'placeholder':'  Mot de passe',"class":"form-password"}
-        }) }}
-    </div>    
-    </div>
-    <div class="form-agree">
-        {{ form_row(registrationForm.agreeTerms) }}
-    </div>
-    <div class="form-button">
-    <div class="form-buttonvalide">
-        <button type="submit" class="btn">Valider</button>
-    </div>
-    <div class="formbuttondeja">
-      <button> <a class="btn" href="">deja membre?</a></button>
-    </div>
+        <div class="monprofiltype">
+            {{ form_row(registrationForm.firstname, {'label':false,'attr': {'placeholder': ' Prenom',"class":"form-firstname"}})}}
+        </div>
+        <div class="monprofiltype">
+            {{ form_row(registrationForm.lastname, {'label':false,'attr': {'placeholder': '  Nom',"class":"form-lastname" }})}}
+        </div>
+        <div class="monprofiltype">
+            {{ form_row(registrationForm.birthdate, {'label':false,'attr': {'placeholder': '  Date de naissance',"class":"form-birthdate"}})}}
+        </div>
+        <div class="monprofiltype">
+                {{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder':'  Email',"class":"form-email"}}) }}
+        </div>
+        <div class="monprofiltype">  
+            {{ form_row(registrationForm.username, {'label':false,'attr': {'placeholder': '  Pseudo',"class":"form-username"}})}}
+        </div>  
+        <div class="monprofiltype">  
+            {{ form_row(registrationForm.plainPassword, {
+                'label': false,'attr': {'placeholder':'  Mot de passe',"class":"form-password"}
+            }) }}  
+        </div>
+        <div class="form-agree">
+            {{ form_row(registrationForm.agreeTerms) }}
+        </div>
+        <div class="monprofiltype">
+            <button type="submit" class="inputneonpurple">Valider</button>
+        </div>
+        <div class="monprofiltype">
+            <button> <a class="inputneonpurple" href="">déjà membre?</a></button>
+        </div>
     </div>
     {{ form_end(registrationForm) }}
-    </div>
 {% endblock %}

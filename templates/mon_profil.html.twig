@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% block title %}Username{% endblock %}
+{% block body %}
+                <h1> Mon profil</h1>
+    <div class="username">
+           {{ form_start(form) }}
+           {{ form_errors(form) }}
+    <div class="monprofil">    
+           {{ form_row(form.firstname)}}
+    </div>
+    <div class="monprofil">  
+           {{ form_row(form.lastname) }}
+     </div>
+     <div class="monprofil">  
+           {{ form_row(form.birthdate)}}
+      </div>
+      <div class="monprofil">
+           {{ form_row(form.username)}}
+      </div> 
+      <div class="monprofil">
+           {{ form_row(form.email) }}
+      </div>
+      <div class="monprofiltype">
+                 <button type="submit" class="inputneonpurple">Valider</button>
+       </div>
+           {{ form_end(form) }}
+      </div>
+      <form method="POST" action="{{ path('user_delete', {idUser:app.user.id})}}"> 
+      <div class="buttondelete">
+                <input type="hidden" name="_token" value="{{csrf_token(app.user.id)}}"><button type="submit" class="inputneonpurple"  > supprimer le compte</button>
+      </div>
+      </form> 
+
+{% endblock %}                  
