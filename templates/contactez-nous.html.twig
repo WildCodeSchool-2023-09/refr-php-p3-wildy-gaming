@@ -3,27 +3,31 @@
 {% block title %}Contactez nous{% endblock %}
 
 {% block body %}
-
-<h1> Contactez nous </h1>
-
-{{ form_errors(registrationForm) }}
-
-{{ form_start(registrationForm) }}
-{{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder': 'EMAIL'}})}}
-{{ form_row(registrationForm.message, {'label':false,'attr': {'placeholder': 'MESSAGE'}})}}
-  <button type="submit">Add category</button>
- {{ form_end(form) }}
- 
- <p>Wildy Gaming <br>
- 
- 1 Rue des corps-de-garde, 67100 Strasbourg<br>
-
-Téléphone : 09 78 45 04 38<br>
-
-Email : contact@WildyGaming.fr.fr<br>
-
-Site Web : www.WildyGaming.fr</p>
-
-<img>{{ asset(path) }}\build\images\PROJET 3 adresse.6dfa36e0.png</img>
-
- {% endblock %}
+<h1> Contactez nous</h1>
+  <form action="">
+    <div class="cadreblue">
+      <div class="connexion">
+          {{ form_start(form) }}
+          <div class="contactname">{{ form_row(form.name)}}</div>
+          <div class="contactemail">{{ form_row(form.email)}}</div>
+          <div class="contactpropo">{{ form_row(form.propo)}}</div>
+            <button type="submit" class="inputneonpurple">Valider</button>
+            {{ form_end(form) }}
+          </div>
+      </div>
+      <div class="center">
+        <div class="contacte">
+          SARL Wildy Gaming<br>
+          Numéro de SIRET : 00001735600027<br>
+          1 Rue des corps-de-garde, 67100 Strasbourg<br>
+          Téléphone : 09 78 45 04 38<br>
+          Email : contact@WildyGaming.fr.fr<br>
+          Site Web : www.WildyGaming.fr<br>
+            <div class="carte">
+              <img src="{{ asset("build/images/adresse.png") }}" width= "500rem" alt="carte" />
+            </div>
+        </div>
+      
+    </div>
+  </form>
+{% endblock %}
