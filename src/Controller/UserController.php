@@ -33,13 +33,13 @@ class UserController extends AbstractController
     public function delete(
         #[MapEntity(mapping: ['idUser' => "id"])] User $user,
         Request $request,
-        EntityManagerInterface $em,
+        EntityManagerInterface $entityManager,
         TokenStorageInterface $token
     ): Response {
-        if ($this->isCsrfTokenValid($user->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid((string)($user->getId()), $request->request->get('_token'))) {
             $token->setToken(null);
-            $em->remove($user);
-            $em->flush();
+            $entityManager->remove($user);
+            $entityManager->flush();
         }
         return $this->redirectToRoute('app_login', [], Response::HTTP_SEE_OTHER);
     }
