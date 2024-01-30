@@ -42,7 +42,10 @@
 .conditions {
     display: flex;
     justify-content: center;
-    margin: 1rem 4rem 3rem 4rem;
+    margin: 1rem 1rem 1rem 1rem;
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
 }
 
 hr.lots-separator-card {
