@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h1 class="inscription">Inscription</h1>
+
+    <div class="centre cadreblue">   
+        {{ form_start(registrationForm) }}
+        {{ form_errors(registrationForm) }}
+        <div class="monprofiltype">
+            {{ form_row(registrationForm.firstname, {'label':false,'attr': {'placeholder': ' Prenom',"class":"form-firstname"}})}}
+        </div>
+        <div class="monprofiltype">
+            {{ form_row(registrationForm.lastname, {'label':false,'attr': {'placeholder': '  Nom',"class":"form-lastname" }})}}
+        </div>
+        <div class="monprofiltype">
+            {{ form_row(registrationForm.birthdate, {'label':false,'attr': {'placeholder': '  Date de naissance',"class":"form-birthdate"}})}}
+        </div>
+        <div class="monprofiltype">
+                {{ form_row(registrationForm.email, {'label':false,'attr': {'placeholder':'  Email',"class":"form-email"}}) }}
+        </div>
+        <div class="monprofiltype">  
+            {{ form_row(registrationForm.username, {'label':false,'attr': {'placeholder': '  Pseudo',"class":"form-username"}})}}
+        </div>  
+        <div class="monprofiltype">  
+            {{ form_row(registrationForm.plainPassword, {
+                'label': false,'attr': {'placeholder':'  Mot de passe',"class":"form-password"}
+            }) }}  
+        </div>
+        <div class="form-agree">
+            {{ form_row(registrationForm.agreeTerms) }}
+        </div>
+        <div class="monprofiltype">
+            <button type="submit" class="inputneonpurple">Valider</button>
+        </div>
+        <div class="monprofiltype">
+            <button> <a class="inputneonpurple" href="">déjà membre?</a></button>
+        </div>
+    </div>
+    {{ form_end(registrationForm) }}
+{% endblock %}

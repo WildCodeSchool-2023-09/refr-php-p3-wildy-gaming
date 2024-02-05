@@ -6,11 +6,14 @@
     margin-top: 5rem;
 }
 
-
 .username .monprofil input {
     justify-content: center;
     position: relative;
     margin: auto;
+}
+
+#profile_user_firstname, #profile_user_lastname, #profile_user_username, #profile_user_email  {
+    width: 100%;
 }
 
 .username select {
@@ -24,11 +27,11 @@
 .birthdate {
     justify-content: space-around;
     display: flex;
-    padding-right: 6px;
 }
 
 .birthdate select {
-    width: 60px;
+    width: auto;
+    margin: auto;
 }
 
 .monprofil {
@@ -63,3 +66,4 @@
     justify-content: space-between;
     grid-template-rows: 2fr 2fr 2fr ;
 }
+
